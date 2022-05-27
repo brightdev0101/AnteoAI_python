@@ -1,0 +1,140 @@
+body{
+    display:flex; 
+    flex-direction:column; 
+}
+
+#demo_content{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+}
+
+#booking_content{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:stretch;
+    width:80%;
+    max-width:900px;
+    min-width:320px;
+}
+
+.booking_box{
+    display:flex;
+    flex-grow:1;
+    flex-basis:0;
+    justify-content: center;
+    align-items:center;
+    padding:20px;
+    margin:20px;
+    min-width:320px;
+}
+
+#booking_header{
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(47, 47, 47, 0.8);
+    color:#FFF;
+}
+
+#booking_title{
+    font-weight: 500;
+    font-size:26pt;
+    line-height:32pt;
+    overflow: hidden;
+}
+
+#booking_subtitle{
+    font-weight: 100;
+    font-size:16pt;
+    line-height: 18pt;
+    margin-top:28px;
+    overflow: hidden;
+}
+
+#booking_form{
+    text-align: center;
+}
+
+#demo-title{
+    font-weight: 300;
+    margin-bottom: 12px;
+    font-size:14pt;
+}
+
+form, .rendered-form{
+    width:100%;
+}
+
+#demo-button{
+    background-color: rgba(47,47,47,0.8);
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+}
+#demo-confirmation{
+    display:none;
+    font-weight: 300;
+}
+
+#plan1{
+    color: rgba(35,146,193,1);
+}
+
+#plan2{
+    color: rgba(176,16,54,1);
+}
+
+#plan3{
+    color: rgba(134, 89, 45, 1);
+}
+
+.pricing_specs{
+    padding:20px;
+    background-color: rgba(180, 180, 180, 0.8);
+    font-weight:300;
+    width:100%;
+    text-align: center;
+}
+
+.pricing_specs ul{
+    margin-bottom: 0;
+}
+
+.pricing_price{
+    width:100%;
+    text-align:center;
+    margin-top:8px;
+}
+
+#pricing_addons{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:stretch;
+    flex-wrap: wrap;
+    width:80%;
+    max-width:900px;
+}
+
+.pricing_addon_box{
+    flex-basis:0;
+    flex-grow:1;
+    padding:20px;
+    margin:20px;
+    background-color: rgba(204, 204, 204, 0.8);
+    min-width:135px;
+}
+
+@media only screen and (max-width: 750px){
+    .pricing_box{
+        flex-basis: 100%;
+    }
+    .pricing_addon_box{
+        flex-basis:30%;
+    }
+}

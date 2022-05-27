@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg height="100%" width="100%" viewBox="0 0 2000 520">
+    <rect width="2000" height="400" style="fill:#CCC;stroke-width:0;stroke:rgb(0,0,0)" />
+    <polyline points="0,400 1200,400 1200,520 1400,400 2000,400" style="fill:#CCC;stroke:#d6d2d2;stroke-width:0;" />
+</svg>

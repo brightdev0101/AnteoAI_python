@@ -1,0 +1,127 @@
+========================
+=       PROJECT        =
+=    BACKUP ROUTINE    =
+=  DROPBOX UPLOAD API  =
+========================
+
+WARNING: This is a separated project from webapp module. Backup and upload automation purposes of the webapp data only.
+
+
+Help on module DropboxManager:
+
+PURPOSE
+    Backup upload with Dropbox API
+
+NAME
+    DropboxManager - import dropbox, sys, os
+
+CLASSES
+    builtins.object
+        DropboxManager
+    
+    class DropboxManager(builtins.object)
+     |  DropboxManager(access_token)
+     |  
+     |  This class manage Dropbox API endpoints
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, access_token)
+     |      Dropbox class constructor
+     |      
+     |      Attribs:
+     |          access_token (string) - Token for using API in Dropbox app
+     |  
+     |  upload_file(self, file_from, file_to)
+     |      This method use Dropbox upload endpoint
+     |      
+     |      Params:
+     |          file_from (string) - Local path backup to upload
+     |          file_to (string) - Destination path backup on cloud
+     |      
+     |      
+     |      Limit:
+     |          Do not use this to upload a file larger than 150 MB. Instead, create an upload session.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+FILE
+    /home/TwitterIT21/backup/DropboxManager.py
+
+
+===============================================
+
+Help on module bckpRoutine:
+
+PURPOSE
+    Script for save a local backup and upload with using DropboxManager class.
+    This script is a routine managed by cronjob, launch 'crontab -e' for more configuration informations.
+
+NAME
+    bckpRoutine - import shutil, logging.config, datetime, dropbox, time, sys, os
+
+FUNCTIONS
+    backup()
+        A function to backup data folder (trends files + customers custom analysis) & database
+        
+        Return:
+            data_bckp (string) - Name of zip data archive for DATA_PATH backup
+            database_bckp (string) - Name of users database for DB_PATH backup
+
+
+    upload(data, database)
+        A function to upload exported backup trough Dropbox API
+        
+        Params:
+            data (string) - Name of zip data archive for DATA_PATH upload
+            database (string) - Name of users database for DB_PATH upload
+
+DATA
+    DATA_PATH = '../data/'
+    DBX_TOKEN = 'la1ayyUVEYIAAAAAAAAAAYW6K1yGlDhjp63Krv6Q5j9dGnbAu4PAObQPy...
+    DB_PATH = '../users.db'
+
+FILE
+    /home/TwitterIT21/backup/bckpRoutine.py
+
+
+===============================================
+
+Help on module MailManager:
+
+NAME
+    MailManager
+
+CLASSES
+    builtins.object
+        MailManager
+    
+    class MailManager(builtins.object)
+     |  Simple class to send mail with a standard SMTP mail server for backup routine
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  sendBackupUpload(self, result)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+FILE
+    /home/TwitterIT21/backup/MailManager.py
+

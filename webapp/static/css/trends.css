@@ -1,0 +1,37 @@
+#trends-container{
+    width:100%;
+    max-width: 1080px;
+    margin: 20px auto;
+}
+
+.trends-menu a.nav-link{
+    background-color: #CCC;
+    color: #2f2f2f;
+}
+
+.trends-menu a.nav-link:hover,
+.trends-menu a.nav-link.active{
+    background-color: #AAA;
+    color: #FFF;
+}
+
+.trends-menu a.nav-link:hover img,
+.trends-menu a.nav-link.active img,
+.trends-menu a.trend-selected,
+.nav-link-img-collapsed{
+    filter: invert(1);
+}
+
+.trends-menu a.nav-link img{
+    width: 34px;
+    height: 34px;
+    margin-right: 1rem;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .trend-name{
+        display: none;
+    }
+}

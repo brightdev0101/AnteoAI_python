@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="anteo AI by globsit">
+    <title>anteo AI - Custom Analysis</title>
+    <meta name="description" content="Anteo AI è lo strumento più efficace per capire cosa ne pensa la gente di te, del tuo marchio e del tuo prodotto. Tramite la NextGen Sentiment Analysis puoi ottenere il meglio dalle discussioni online.">
+	<link rel="manifest" href="{{url_for('static', filename='manifest.json')}}">
+	<meta name="theme-color" content="#535c66">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    {% block styles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	
+    <link rel="stylesheet" href="{{url_for('static', filename='css/common.css')}}" /> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}" /> 
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/components/navbar.css')}}" /> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/components/footer.css')}}" />  -->
+    
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/libs/jquery-jvectormap-2.0.5.css')}}" />
+
+	<link rel="apple-touch-icon" sizes="57x57" href="{{url_for('static', filename='imgs/ios/apple-icon-57x57.png')}}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{url_for('static', filename='imgs/ios/apple-icon-60x60.png')}}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{url_for('static', filename='imgs/ios/apple-icon-72x72.png')}}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename='imgs/ios/apple-icon-76x76.png')}}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{url_for('static', filename='imgs/ios/apple-icon-114x114.png')}}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{url_for('static', filename='imgs/ios/apple-icon-120x120.png')}}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{url_for('static', filename='imgs/ios/apple-icon-144x144.png')}}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{url_for('static', filename='imgs/ios/apple-icon-152x152.png')}}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='imgs/ios/apple-icon-180x180.png')}}">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{{url_for('static', filename='imgs/android/android-icon-192x192.png')}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='imgs/favicon-32x32.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static', filename='imgs/favicon-96x96.png')}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='imgs/favicon-16x16.png')}}">
+    {% endblock %}
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0LS3CRN0B"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-N0LS3CRN0B');
+	</script>
+</head>
+<body>
+
+	<div class="loader">
+		<i class="fas fa-cog fa-spin"></i>
+	</div>
+
+	<div id="main_bg"></div>
+
+	<main id="maincontainer" class="container-fluid main-container" style="visibility:hidden">
+		{% include 'components/navbar.html' %}
+		
+		<div id="custom_container">
+			
+			<div class="col-lg-12">
+				<div id="caList">
+					<div id="caList_title">
+						CONFIGURATION:
+					</div>
+					<div id="caList_options">
+						<select name="cars" id="caList_dropdown">
+						</select>
+					</div>
+					<div id="caList_btns">
+						<div onClick="loadCustomTrend()" id="caList_btns_1"> LOAD ANALYSIS</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-12">
+
+				<div id="gsCustomAnalysisSetup" class="container-fluid py-3 my-4 shadow light-gray">
+					<div class="text-center mb-3"><b>CUSTOM ANALYSIS</b></div>
+					<form id="formCustomTrends">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label for="keywords">Analysis Name</label>
+								<input type="text" class="form-control form-control-sm" name="name" id="config-name">
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="form-group">
+								<div class="form-group">
+									<label for="language">Language</label>
+									<select class="form-control form-control-sm" name="language" id="config-select-lang">
+										<option value="en">English</option>
+                                        <option value="it">Italian</option>
+									</select>
+								</div> 
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<label>Source</label><br>
+								<div class="mt-2">
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="source_tw" id="source_tw" value="true">Twitter
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="source_ig" id="source_ig" value="true">Instagram
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="source_gogl" id="source_gogl" value="true">Google
+										</label>
+									</div>
+									<br>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="source_fb" id="source_fb" value="true">Facebook
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="source_lkdn" id="source_lkdn" value="true">LinkedIn
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<label for="hashtags">Elements</label><br>
+								<div class="mt-2">
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="analysis_text" id="analysis_text">Text
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="analysis_images" id="analysis_images">Images
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="analysis_emoji" id="analysis_emoji">Emoji
+										</label>
+									</div> 
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label for="keywords"><b>Keywords</b></label>
+								<input type="text" class="form-control form-control-sm" name="keywords" id="config-keywords">
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="form-group">
+								<label for="georeference">Georeference</label>
+								<select class="form-control form-control-sm" name="georeference" id="config-select-geo">
+									<option value="all">ALL</option>
+									<option value="it">Italy</option>
+									<option value="us">USA</option>
+								</select>
+							</div> 
+						</div>
+						<div class="col-lg-4">
+							<div class="form-group" id="">
+								<label for="usr">Alerts</label><br>
+								<div class="mt-2">
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="alert_sentiment" id="alert_sentiment">Sentiment
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="alert_influencers" id="alert_influencers">influencers
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="alert_trends" id="alert_trends">Trends
+										</label>
+									</div> 
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="form-group">
+								<label for="main_param">Parameters</label>
+								<select class="form-control form-control-sm" name="main_param" id="config-main-param">
+									<option value="1">Likes</option>
+									<option value="2">Reposts</option>
+									<option value="3">Clicks</option>
+								</select>
+							</div> 
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label for="usr"><b>Algorithm</b></label><br>
+								<div class="mt-2">
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="algorithm" value="1">ClassicEval
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="algorithm" value="2">SmartEval
+										</label>
+									</div>
+									<div class="form-check-inline">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="algorithm" value="3">FastEval
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="form-group">
+								<label for="plot1">Plot 1</label>
+								<select class="form-control form-control-sm" name="plot1" id="config-select-plot1" disabled>
+									<option value="bar_sentiment">[BAR] Sentiment</option>
+									<option value="pie_sentiment">[PIE] Sentiment</option>
+									<option value="map">[MAP] Georeference</option>
+								</select>
+							</div> 
+						</div>
+						<div class="col-lg-2">
+							<div class="form-group">
+								<label for="plot2">Plot 2</label>
+								<select class="form-control form-control-sm" name="plot2" id="config-select-plot2" disabled>
+									<option value="bar_sentiment">[BAR] Sentiment</option>
+									<option value="pie_sentiment">[PIE] Sentiment</option>
+									<option value="map">[MAP] Georeference</option>
+								</select>
+							</div> 
+						</div>
+						<div class="col-lg-2">
+							<div class="form-group">
+								<label for="plot3">Plot 3</label>
+								<select class="form-control form-control-sm" name="plot3" id="config-select-plot3" disabled>
+									<option value="bar_sentiment">[BAR] Sentiment</option>
+									<option value="pie_sentiment">[PIE] Sentiment</option>
+									<option value="map">[MAP] Georeference</option>
+								</select>
+							</div> 
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-lg-4">
+							<p>ClassicEval - Utilizza due strumenti di valutazione delle opinioni per comprendere le emozioni degli utenti. La migliore scelta per Analisi Marketing.</p>
+
+							<p>SmartEval - Due tipi di valutazione e una potente rete neurale per comprendere le emozioni in modo analitico. La migliore scelta per Analisi Finanziarie.</p>
+
+							<p>FastEval - Utilizza il più efficace strumento di valutazione. La migliore scelta per analisi quotidiane in tempo reale.</p>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<label for="report">Report</label>
+								<select class="form-control form-control-sm" name="report" id="config-report" disabled>
+									<option value="1">Full</option>
+									<option value="2">Lite</option>
+								</select>
+							</div> 
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<label for="timeframe">Timeframe</label>
+								<select class="form-control form-control-sm" name="timeframe" id="config-timeframe" disabled>
+									<option value="7">7 Days</option>
+									<option value="30">30 Days</option>
+									<option value="90">3 Months</option>
+								</select>
+							</div> 
+						</div>
+					</div>
+					<div class="row">
+						
+						<div class="col-lg-8"></div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-right">
+							<button type="button" class="btn btn-secondary" onClick="buttonInfo()"> &#9432;</button>
+							<button type="button" class="btn btn-secondary" onClick="buttonDelete()"> <i class="fas fa-trash"></i></button>
+							<button type="button" id="button_report" class="btn btn-secondary" onClick="buttonReport()"><i class="fas fa-file-download"></i></button>
+							<button type="button" id="button_update" class="btn btn-secondary" onClick="buttonUpdate()">UPDATE</button>
+						</div>
+					</div>
+					</form>
+				</div>
+
+				<div id="gsCustomAnalysis">
+					<div id="gsStatsContainer" class="container-fluid py-3 my-4 shadow">
+
+						<div class="text-center"><b>Contents</b></div>
+						<div class="text-center analysis_subtitle"><b>Latest update: </b><span id="latest_update_date">-</span></div>
+
+						<div id="sentiment" class="row">
+							<div class="col-lg-4 mb-3" id="plot1"></div>
+							<div class="col-lg-4 mb-3" id="plot2"></div>
+							<div class="col-lg-4 mb-3" id="plot3" style="min-height: 160px;"></div>
+						</div>
+
+						<div id="people" class="top-people-partial">
+							<div class="row">
+								<div class="col-lg-4">
+									<gs-mostusers type="influencer_users" title="Influencers"></gs-mostusers>
+								</div>
+								<div class="col-lg-4">
+									<gs-mostusers type="most_active_users" title="Top Active"></gs-mostusers>
+								</div>
+								<div class="col-lg-4">
+									<gs-mostusers type="most_followed_users" title="Most Followed"></gs-mostusers>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="tweets">
+						<gs-cards data-src="tweets">
+							<div class="card border border-light shadow mb-5">
+								<div class="card-header">
+									<!--<a class="d-flex flex-row align-items-center width-100" href="https://www.twitter.com/{screen_name}" target="_blank">-->
+									<a class="d-flex flex-row align-items-center width-100" target="_blank">
+										<div class="profile_pic d-flex flex-row justify-content-center align-items-center">
+											{user_img}
+										</div>
+										<div class="user">
+											<div class="fullname text-truncate">{user}</div>
+											<div class="username text-truncate">@<span>{screen_name}</span></div>
+										</div>
+									</a>
+								</div>
+								<div class="card-body">
+									<div class="text">{text}</div>
+									<div class="media">{img}</div>
+								</div>
+								<div class="card-footer d-flex flex-row-reverse mb-3">
+									<a class="tweet-stat">
+										<i class="far fa-comment"></i>
+									</a>
+									<a class="tweet-stat">
+										<i class="fas fa-retweet"></i>
+										<span>{retweet}</span>
+									</a>
+									<a class="tweet-stat">
+										<i class="far fa-heart"></i>
+										<span data-bind="text:Likes">{like}</span>
+									</a>
+									<a class="tweet-stat">
+										<i class="fab fa-{post_src}"></i>
+									</a>
+								</div>
+							</div>
+						</gs-cards>
+					</div>
+				</div>
+				
+				<div id="missingdata" style="visibility: hidden; text-align:center;" >
+					<h1>
+						AI analysis in progress . . .
+					</h1>
+					<h3>
+						RESULTS WILL BE READY SOON
+					</h2>
+				</div>
+
+				<div id="inconsistent_data" style="visibility: hidden; text-align: center;">
+					<h3>
+						There is not enough data for accurate analysis in the selected timeframe. <br>
+						Extend the timeframe or wait for the next data update.
+					</h3>
+				</div>
+			</div>
+		</div>
+		
+		{% include 'components/footer.html' %}
+		
+	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="{{url_for('static', filename='js/libs/jquery-jvectormap-2.0.5.min.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/libs/jquery-jvectormap-world-mill-en.js')}}"></script>
+
+	<script type="text/javascript" src="{{url_for('static', filename='js/utils.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='js/gsApp.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='js/gsCustomTrends.js')}}"></script>
+	
+	<script type="text/javascript" src="{{url_for('static', filename='js/components/gsSidebar.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='js/components/gsHashTags.js')}}" defer></script>
+	<script type="text/javascript" src="{{url_for('static', filename='js/components/gsMostUsers.js')}}" defer></script>
+	<script type="text/javascript" src="{{url_for('static', filename='js/components/gsCards.js')}}" defer></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js" integrity="sha512-yadYcDSJyQExcKhjKSQOkBKy2BLDoW6WnnGXCAkCoRlpHGpYuVuBqGObf3g/TdB86sSbss1AOP4YlGSb6EKQPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+	
+	<script type="text/javascript" src="{{url_for('static', filename='js/components/navbar.js')}}"></script> 
+
+	<script type="text/javascript">
+		var logged = true;
+		$(document).ready(function(){
+			selected_trend = "{{selected_trend}}"
+			custom_trends_string = {{custom_trends | tojson }};
+	
+			
+			arrangeNavbar('custom');
+	
+			custom_trends = JSON.parse(custom_trends_string);
+			available_trends = "{{available_trends}}"
+	
+			appInit();
+			initCustomTrends();
+		});
+	</script>
+
+</body>
+</html>

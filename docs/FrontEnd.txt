@@ -1,0 +1,7 @@
+===============================
+=    ANTEO AI - FRONT END     =
+=   STACK - PYTHON/FLASK/JS   =
+===============================
+
+# TODO: FROM ALL JS LOGIC MISSING COMMENTS & FIND TOOL TO FAST GENERATION
+

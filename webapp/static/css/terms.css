@@ -1,0 +1,32 @@
+#termscontainer{
+    width:100%;
+    max-width: 800px;
+    min-height:100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+    
+#terms_title{
+    font-weight:500;
+    font-size:25pt;
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+
+#terms_text{
+    font-weight: 300;
+    font-size:12pt;
+}
+
+#conditions_download{
+    text-align: center;
+    font-size:22pt;
+}
+
+#conditions_download a,
+#conditions_download a.hover,
+#conditions_download a.active,
+#conditions_download a.visited{
+    color:#2f2f2f;
+}

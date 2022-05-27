@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;300;500&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    /* overflow-x:hidden; */
+}
+
+.hidden{
+    display: none !important;
+}
+
+canvas {
+    max-height: 250px;
+}
+
+
+body{
+    width:100%;
+    min-height: 100%;
+    min-width:320px;
+    /* color: rgba(243, 11, 11, 0.55); */
+}
+
+#maincontainer{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/static/imgs/bg.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    z-index:2;
+    position:absolute;
+    margin:0px;
+    padding:0px;
+    min-width:320px;
+    font-weight:500;
+    width:100%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+#main_bg{
+    z-index:1;
+    opacity:0.4;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-image: url("/static/imgs/mentecuore.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 70vh;
+}
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1033;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #115c8b;
+    opacity: 0.9;
+    visibility: hidden;
+}
+
+.loader i {
+    font-size: 3em;
+    color: white;
+}
+
+.user .fullname {
+    font-weight: 600;
+    line-height: 1.2em;
+    margin-bottom: 0;
+    color: initial;
+}
+
+.user .username {
+    color: #999999;
+    line-height: 1.1em;
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+#gsHashTags a.btn.btn-link.m-2 {
+    font-size: 1.25rem;
+}
+
+#userPreferredTopics {
+    border: 2px dashed #777777;
+}
+
+.tweets-partial .card,
+.trends-menu{
+    background-color: rgba(204, 204, 204, 0);
+}
+
+.tweets-partial .card,
+#gsStatsContainer,
+.light-gray {
+    background-color: rgba(204, 204, 204, 1);
+}
+
+
+.profile_pic img{
+    overflow-y: hidden;
+}
+
+#inconsistent_data h3{
+    overflow-y: hidden;
+}
+.tweets-partial .card .card-header {
+    background-color: transparent;
+    border: none;
+}
+
+.tweets-partial .card .card-header .profile_pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-color: #CCC;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.tweets-partial .card .card-header .profile_pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tweets-partial .card .card-header .profile_pic i {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.tweets-partial .card .card-header .user .fullname.text-truncate {
+    display: inline-block;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tweets-partial .card .card-footer {
+    background-color: transparent;
+    border: none;
+    color: #535c66;
+}
+
+.tweets-partial .card .card-footer .tweet-stat {
+    margin-right: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.tweets-partial .card .card-footer .tweet-stat span {
+    color: #2f2f2f;
+    font-size: 0.8em;
+}
+
+.tweets-partial .card .card-footer .tweet-stat i {
+    margin-right: 6px;
+    color: #535c66;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+}
+
+.tweets-partial .card .card-footer .tweet-stat:hover i {
+    color: #38b2ff;
+}
+
+.tweets-partial .card .card-body .media img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tweets-partial .card .card-body a {
+    color: #1B95E0;
+}
+
+.tweets-partial .card .card-body a:hover {
+    color: #9fabb6;
+}
+
+.most-users-container {
+    font-size: 0.9em;
+}
+
+.most-users-container h5 {
+    font-size: 1em;
+    color: #535c66;
+}
+
+.most-users-container .item {
+    background-color: #ffffff;
+}
+
+.most-users-container .item .profile_pic img {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto;
+}
+
+.most-users-container .user {
+    text-align: center;
+}
+
+.most-users-container .user .username.text-truncate {
+    display: inline-block;
+    max-width: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-columns {
+    column-gap: 3rem;
+}
+
+.card {
+    border-radius: 0.5rem;
+}
+
+.analysis_subtitle{
+    color:#2f2f2f;
+    font-size: 14px;
+}
+
+#sentiment {
+    margin-top: 10px;
+}
+
+#button_generate_report, #button_update_stats{
+    background-color:lightgray; 
+    border: 1px solid gray; 
+    padding:5px; 
+    text-align:center; 
+    width:80%; 
+    margin: 5px auto;
+}
+
+/* RESPONSIVE REDESIGN */
+
+@media only screen and (max-width: 900px) {
+    /* #intro_video{
+        height:1000px;
+    } */
+    
+    /* #intro_content{
+        height:1000px;
+    } */
+    
+}
+
+@media only screen and (max-width: 390px) {
+    /* #intro_video{
+        height:1150px;
+    }
+    
+    #intro_content{
+        height:1150px;
+    } */
+
+    .intro_content_title{
+        margin:3 3;
+        width:100%;
+    }
+}
+
+
+@media only screen and (max-width: 340px) {
+    .navbar-brand {
+        margin-right: 0;
+    }
+    .tweets-partial .card .card-header .user .fullname.text-truncate {
+        max-width: 210px;
+    }
+    .most-users-container .user .username.text-truncate {
+        max-width: 70px;
+    }
+    .trends-menu a.nav-link img {
+        width: 24px;
+        height: 24px;
+        margin-right: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .tweets-partial .card .card-header .user .fullname.text-truncate {
+        max-width: 210px;
+    }
+    .trends-menu a.nav-link img{
+        width: 24px;
+        height: 24px;
+        margin-right: 0.75rem;
+    }
+}
+
+@media only screen and (min-width : 500px) and (max-width : 820px) {
+    .card-columns {
+        column-gap: 1.5rem;
+        column-count: 2;
+    }
+    .nav-link {
+        padding: 0.5rem 0.5rem;
+    }
+    .tweets-partial .card .card-header .user .fullname.text-truncate {
+        max-width: 210px;
+    }
+    .trends-menu a.nav-link img{
+        width: 24px;
+        height: 24px;
+        margin-right: 0.75rem;
+    }
+    .text-truncate {
+        max-width: 220px;
+    }
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1050px) {
+    .card-columns {
+        column-gap: 1.5rem;
+    }
+    
+    .tweets-partial .card .card-header .user .fullname.text-truncate {
+        max-width: 210px;
+    }
+    .trends-menu a.nav-link img,
+    #topTwitterITMenu a.nav-link.mx-3 img {
+        width: 24px;
+        height: 24px;
+        margin-right: 0.75rem;
+    }
+    .most-users-container .user .username.text-truncate {
+        max-width: 54px;
+    }
+}

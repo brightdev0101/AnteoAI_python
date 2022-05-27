@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="anteo ai by globsit">
+    <title>anteo AI - Terms & conditions</title>
+    <meta name="description" content="anteo AI è lo strumento più efficace per capire cosa ne pensa la gente di te, del tuo marchio e del tuo prodotto. Tramite la NextGen Sentiment Analysis puoi ottenere il meglio dalle discussioni online.">
+	<link rel="manifest" href="{{url_for('static', filename='manifest.json')}}">
+	<meta name="theme-color" content="#535c66">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/utils.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/components/navbar.js')}}"></script> 
+    <script type="text/javascript" src="{{url_for('static', filename='js/gsApp.js')}}"></script>
+
+    {% block styles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/terms.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/common.css')}}" /> 
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/components/navbar.css')}}" /> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/components/footer.css')}}" />  -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{url_for('static', filename='imgs/ios/apple-icon-57x57.png')}}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{url_for('static', filename='imgs/ios/apple-icon-60x60.png')}}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{url_for('static', filename='imgs/ios/apple-icon-72x72.png')}}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename='imgs/ios/apple-icon-76x76.png')}}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{url_for('static', filename='imgs/ios/apple-icon-114x114.png')}}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{url_for('static', filename='imgs/ios/apple-icon-120x120.png')}}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{url_for('static', filename='imgs/ios/apple-icon-144x144.png')}}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{url_for('static', filename='imgs/ios/apple-icon-152x152.png')}}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='imgs/ios/apple-icon-180x180.png')}}">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{{url_for('static', filename='imgs/android/android-icon-192x192.png')}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='imgs/favicon-32x32.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static', filename='imgs/favicon-96x96.png')}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='imgs/favicon-16x16.png')}}">
+    {% endblock %}
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0LS3CRN0B"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-N0LS3CRN0B');
+	</script>
+</head>
+<body>
+
+	<div class="loader">
+		<i class="fas fa-cog fa-spin"></i>
+	</div>
+	
+	
+
+    <div id="main_bg"></div>
+
+    <div id="maincontainer">
+        {% include 'components/navbar.html' %}
+        
+        <div id="termscontainer">
+            <div id="terms_title">
+                anteo<sup>ai</sup> - Termini di utilizzo e condizioni di vendita
+            </div>
+            
+            <div id="terms_text">
+                <p>
+                    Benvenuto in anteo<sup>ai</sup>! Ci auguriamo che ti divertirai a far parte della squadra Globsit srl, proprietaria e titolare di vari servizi online tra cui anteo.ai e twitter.it, l’esclusivo servizio di Next Generation Sentiment Analysis in abbonamento che permette di capire le conversazioni online. 
+                    Utilizzando i Servizi, accetti di essere vincolato da questi Termini e Condizioni ("Termini e Condizioni" o "Termini"). Questi Termini regolano il tuo utilizzo e l’accesso al sito Web e a tutti i Servizi associati. 
+                    Possiamo modificare questi termini in qualsiasi momento, ma pubblicheremo un avviso su questo sito Web in caso di eventuali modifiche sostanziali. 
+                    L'uso continuato di anteo<sup>ai</sup> e dei suoi Servizi equivale all'accettazione dei termini e delle condizioni attualmente in essere. Quindi, per favore, controlla qui di tanto in tanto. 
+                </p>
+                
+                <p id="conditions_download">
+                    <a href="{{url_for('static', filename='CondizioniGeneraliAnteo.pdf')}}" target="_blank">
+                        LEGGI LE CONDIZIONI GENERALI DI CONTRATTO
+                    </a>
+                </p>
+                
+                <p>
+                    Alcuni Servizi sono in lavorazione. Ci riserviamo il diritto di modificarli o addirittura eliminarli senza preavviso, a nostra esclusiva discrezione. 
+                </p>
+                
+                <p>
+                    <b>1. Registrazione </b>
+                </p>
+                
+                <p>
+                    Salvo quanto espressamente previsto in questi Termini e Condizioni, i membri possono mantenere solo una registrazione attiva con anteo<sup>ai</sup>. In altre parole, è una registrazione per persona. 
+                    L'unica eccezione a questa regola è se desideri creare più di un profilo PRO o ENTERPRISE, nel qual caso potresti avere un numero corrispondente di registrazioni acquistando il numero necessario di extra pack anteo<sup>ai</sup> Additional user. 
+                    Qualsiasi altro uso di più account sui nostri Servizi, inclusi i tentativi di fuorviare, frodare, confondere o ingannare in altro modo noi o i nostri membri, costituisce una violazione di questi Termini e condizioni. 
+                </p>
+                
+                <p>
+                    Se ti abboni a uno dei nostri Servizi, ti verranno assegnate una coppia di credenziali utente / password, che serviranno per accedere al Servizio.
+                    Come utente registrato, puoi aggiornare le impostazioni del tuo account, ad eccezione dell’indirizzo e-mail, andando nella scheda apposita. 
+                    Lì puoi anche cambiare la tua password in qualsiasi momento. Inoltre, se dimentichi la password o il nome utente, puoi utilizzare il tasto recupera password dalla pagina di login. 
+                </p>
+                
+                <p>
+                    <b>2. Servizi PRO / Enterprise</b> 
+                </p>
+                
+                <p>
+                    Quando ti iscrivi a un servizio Pro o Enterprise, dovrai fornirci il tuo nome, indirizzo e-mail e indirizzi di fatturazione e spedizione, nonché i dati di addebito RID nel caso di pagamento mensile. 
+                    Accetti di pagare la quota di abbonamento applicabile come indicato su relativo Order Form.  
+                </p>
+                
+                <p>
+                    Dichiari che tutte le informazioni fornite sono accurate. Accetti inoltre di mantenere e aggiornare le tue informazioni secondo necessità in modo che rimangano accurate e aggiornate. 
+                    Nel caso in cui le informazioni fornite siano inesatte o non aggiornate, Globsit srl si riserva il diritto di annullare l'abbonamento. 
+                    Ci riserviamo il diritto di rifiutare o interrompere la fornitura di un Servizio a qualsiasi utente in qualsiasi momento a nostra esclusiva discrezione. 
+                    Salvo diversa indicazione, l'adesione a qualsiasi Servizio avviene esclusivamente tramite l'accesso online e/o elettronico.  
+                </p>
+                
+                <p>
+                    I nostri Servizi generalmente forniscono i loro contenuti via dashboard online e tramite e-mail, inclusi avvisi o raccomandazioni commerciali, indicazioni operative e contenuti strategici sui social media. 
+                    Non è disponibile alcuna opzione di disattivazione per queste e-mail (a meno che non annulli l'abbonamento). Naturalmente, puoi sempre disattivare le nostre e-mail di marketing nella pagina delle impostazioni. 
+                </p>
+                
+                <p>
+                    <b>3. Termini di prova, fatturazione automatica e politica di cancellazione </b>
+                </p>
+                
+                <p>
+                    Alcuni Servizi possono fornire una prova gratuita o un'offerta introduttiva. Se viene fornita tale offerta, è consentita solo una per persona in un dato momento. 
+                    Inoltre, è previsto il limite di una prova per persona in un dato periodo di un mese, salvo diversa indicazione nell'offerta. 
+                </p>
+                
+                <p>
+                    Registrandoti per una prova gratuita, avrai accesso al Servizio per il periodo di prova promozionale. Se annulli prima della fine del periodo dell'offerta promozionale, non ti verrà addebitato nessun importo. 
+                    Se non annulli l'abbonamento entro il periodo dell'offerta di prova, addebiteremo l'importo sulla carta di credito principale o sul conto corrente che hai fornito durante la procedura di registrazione. 
+                    Puoi contattare l'assistenza per i membri all'indirizzo membersupport@anteo.ai per terminare il periodo di prova. 
+                </p>
+                
+                <p>
+                    La tua iscrizione si rinnoverà automaticamente alla tariffa in vigore del profilo PRO, fino a quando non ci comunicherai la tua decisione di terminare la tua iscrizione. 
+                    La maggior parte degli abbonamenti si rinnoverà per un anno, indipendentemente dall'offerta in base alla quale l'abbonamento è stato avviato. 
+                    Per termini di abbonamento superiori a tre mesi, ti invieremo un'e-mail con la durata e il prezzo del rinnovo prima dell'addebito. 
+                    I termini di abbonamento mensili verranno comunicati annualmente in merito ai futuri rinnovi. Se desideri disattivare il rinnovo automatico o estendere l'abbonamento per ulteriori anni, contatta l'assistenza per i membri. 
+                    Di conseguenza, accetti che la tua quota di iscrizione o abbonamento venga contabilizzata automaticamente all'inizio di ogni periodo di rinnovo alla tariffa in vigore (più le eventuali imposte sulle vendite, se applicabili). 
+                </p>
+                
+                <p>
+                    Globsit srl si riserva il diritto di aumentare le tariffe di un Servizio o istituire nuovi addebiti con un preavviso ragionevole. Gli importi dei servizi sono dovuti in anticipo. 
+                </p>
+                
+                <p>
+                    <b>4. Trasferimento; Interruzione di un servizio</b> 
+                </p>
+                
+                <p>
+                    Non puoi trasferire il tuo abbonamento a qualcun altro. Per assistenza in questa situazione, contatta il supporto su membersupport@anteo.ai 
+                </p>
+                
+                <p>
+                    <b>5. Informazioni sul trasferimento di credito </b>
+                </p>
+                
+                <p>
+                    Alcuni dei nostri servizi offrono la possibilità di trasferire il tuo credito verso un altro servizio anteo<sup>ai</sup>. 
+                    A seconda dei termini del tuo acquisto, potresti essere autorizzato a trasferire il credito intero o proporzionale dal tuo acquisto. 
+                    La maggior parte dei servizi idonei per un bonifico consentirà uno scambio entro 30 giorni dall'acquisto iniziale.
+                    Se non sei sicuro che il tuo servizio sia idoneo o meno per un trasferimento di credito, contatta membersupport@anteo.ai. 
+                </p>
+                
+                <p>
+                    Tutto il credito deve essere scambiato al prezzo di listino del prodotto in cui viene trasferito e non è cumulabile con offerte promozionali o sconti.
+                    I membri possono utilizzare qualsiasi scambio o rimborso disponibile una volta per servizio. 
+                    Se approfitti di una garanzia di trasferimento del credito in un nuovo abbonamento, non sarai più idoneo a eseguire ulteriori azioni con quel credito. 
+                </p>
+                
+                <p>
+                    Se usufruisci di una garanzia di trasferimento del credito, tieni inoltre presente che perderai l'accesso a tutti i prodotti e vantaggi inclusi nell'offerta promozionale originale, 
+                    inclusi servizi aggiuntivi o rapporti inclusi come bonus per aver usufruito dell'offerta. 
+                    Se il prezzo di listino del servizio a cui desideri trasferire è superiore all'importo del credito che hai, riceverai una durata parziale del servizio: 
+                    il consueto avviso di rinnovo automatico verrà inviato via email un mese prima della data di fine modificata. 
+                </p>
+                
+                <p>
+                    Se l'importo del credito di cui disponi è superiore al prezzo di listino del servizio a cui vorresti trasferire, l'abbonamento verrà esteso per il periodo di tempo appropriato in base alla tariffa. 
+                    Globsit srl si riserva il diritto di non consentire il trasferimento di determinati servizi per qualsiasi motivo a esclusiva discrezione. 
+                </p>
+                
+                <p>
+                    <b>6. Analysis Report</b>
+                </p>
+                
+                <p>
+                    Facciamo di tutto per assicurarci che le nostre Custom Analysis non siano influenzate in alcun modo dal compenso e nessun AI specialist modificherà, approverà o disapproverà i contenuti inequivocabilmente segnalati come output attinente dall’AI. 
+                    Ci assicuriamo inoltre che i contenuti di review analizzati dagli AI Specialist di qualsiasi marchio rimangano distinti dal team editoriale che scrive contenuti per anteo<sup>ai</sup>. 
+                </p>
+                
+                <p>
+                    Nessuna analisi di prodotti o servizi deve essere interpretata come un'approvazione o garanzia di alcun tipo. 
+                    Facciamo del nostro meglio per assicurarci che le informazioni su cui facciamo affidamento per la redazione dei report siano vere e attuali, ma non garantiamo che lo siano permanentemente. 
+                </p>
+                
+                <p>
+                    Qualsiasi servizio o prodotto non offerto direttamente da Globsit srl è soggetto ai propri termini e condizioni, incluso il modo in cui possono essere utilizzare le informazioni ricevute, 
+                    che dovrebbero essere fornite dalla società attraverso la quale si riceve il prodotto o servizio.  
+                </p>
+                
+                <p>
+                    <b>7. Termini di utilizzo aggiuntivi e di terze parti </b>
+                </p>
+                
+                <p>
+                    Alcune parti del nostro sito utilizzano servizi terzi per il recupero dei dati: <br>
+                    
+                    <ul>
+                        <li>1) Google Search API</li>
+                        <li>2) Facebook Graph API</li>
+                        <li>3) Linkedin API</li>
+                        <li>4) TikTok API</li>
+                        <li>5) Telegram API</li>
+                    </ul>
+                 </p>
+                
+                <p>
+                    Se utilizzi le statistiche di anteo<sup>ai</sup>, sei anche vincolato dai Termini di servizio di Google e di altri. 
+                    Se non desideri essere vincolato da questi termini, o da uno qualsiasi dei termini contenuti in queste Regole, ti preghiamo di non utilizzare il nostro servizio anteo<sup>ai</sup>. 
+                    In caso di conflitto, i termini del singolo Servizio prevarranno rispetto al Servizio in questione. 
+                    Pertanto, assicurati di rivedere eventuali termini e condizioni aggiuntivi rispetto a qualsiasi Servizio specifico prima di iscriverti. 
+                </p>
+                
+                <p>
+                    <b>8. Proprietà intellettuale </b>
+                </p>
+                
+                <p>
+                    Tutti i Contenuti sui nostri siti Web e qualsiasi Servizio che forniamo sono protetti dalle leggi Europee e internazionali sul copyright ed sono di proprietà di Globsit srl e/o dei fornitori dei contenuti su licenza.
+                    Per "Contenuto" si intende qualsiasi informazione, modalità di espressione o altro materiale e servizio trovato su anteo<sup>ai</sup>. 
+                    Ciò include bacheche, blog, custom search, valutazioni, report, software, grafica, video e qualsiasi altra funzionalità. 
+                </p>
+                
+                <p>
+                    È possibile eseguire una copia del Contenuto per uso aziendale, a condizione che il materiale copiato rimanga intatto e includa il seguente avviso: "Copyright 2022 [o qualunque sia l'anno in corso] Globsit srl -  Tutti i diritti riservati." 
+                    Qualsiasi altra copia, distribuzione, archiviazione o trasmissione di qualsiasi tipo, o qualsiasi uso commerciale dei nostri Contenuti, è vietata senza il previo consenso scritto di Globsit srl. 
+                    Ciò significa che non puoi vendere, mettere all'asta, trasferire o barattare il tuo abbonamento o qualsiasi pubblicazione individuale. 
+                    Puoi effettuare o modificare le tue custom search su anteo<sup>ai</sup> in qualsiasi momento, ma tali scelte, la loro cronologia dei punteggi e i dati aggregati da anteo<sup>ai</sup> rimangono di proprietà di Globsit srl. 
+                </p>
+                
+                <p>
+                    <b>9. Condotta </b>
+                </p>
+                
+                <p>
+                    Accetti di utilizzare anteo<sup>ai</sup> solo per scopi leciti. Non puoi utilizzare o consentire ad altri di utilizzare la tua iscrizione a anteo<sup>ai</sup> per: <br>
+                    
+                    <ul>
+                        <li>Pubblicare o trasmettere qualsiasi contenuto che sia dirompente, incivile, offensivo, volgare, profano, osceno, odioso, fraudolento, minaccioso, molesto, diffamatorio o che riveli questioni private o personali riguardanti qualsiasi persona; </li>
+                        <li>Pubblicare o trasmettere qualsiasi materiale che non si ha il diritto di trasmettere ai sensi di legge (come diritti d'autore, segreti commerciali o titoli) o in base a rapporti contrattuali o fiduciari (come accordi di riservatezza);</li>
+                        <li>Pubblicare, trasmettere o collegare a materiale sessualmente esplicito; </li>
+                        <li>Impersonare qualsiasi persona, o dichiarare falsamente o altrimenti travisare la propria affiliazione con una persona o entità;</li>
+                        <li>Pubblicare o trasmettere qualsiasi pubblicità, materiale promozionale o altre forme di sollecitazione, comprese catene di Sant'Antonio e schemi piramidali;</li>
+                        <li>Pubblicare o trasmettere qualsiasi file che contenga virus, file corrotti, "cavalli di Troia" o qualsiasi altra caratteristica contaminante o distruttiva che possa danneggiare il computer di qualcuno; </li>
+                        <li>Falsificare intestazioni o manipolare identificatori o altri dati per mascherare l'origine di qualsiasi contenuto trasmesso attraverso i nostri siti o per manipolare la tua presenza sui nostri siti; </li>
+                        <li>Utilizzare qualsiasi mezzo automatizzato, inclusi, a titolo esemplificativo, agenti, robot, script o spider, per accedere, monitorare, copiare o raccogliere dati da qualsiasi parte dei nostri siti; </li>
+                        <li>Intraprendere qualsiasi azione che imponga un carico irragionevole o sproporzionato sulla nostra infrastruttura o interrompa il funzionamento dei nostri sistemi o Servizi;</li>
+                        <li>Intraprendere qualsiasi azione che danneggi o interrompa il funzionamento dei nostri sistemi o Servizi. </li>
+                    </ul>
+                </p>
+                
+                <p>
+                    L'accesso non autorizzato ai nostri siti costituisce una violazione di questi Termini e Condizioni e una violazione della legge. 
+                    Accetti di non accedere ai nostri siti con qualsiasi mezzo diverso dalle interfacce che forniamo per l'uso nel nostro accesso ai nostri siti. 
+                    Globsit srl può in qualsiasi momento, senza preavviso e a nostra esclusiva discrezione, rimuovere qualsiasi contenuto, terminare qualsiasi iscrizione, 
+                    intraprendere qualsiasi azione per aver violato quanto sopra o in altro modo intraprendere un'azione di disturbo per un Servizio.  
+                    Sei responsabile delle dichiarazioni fatte e delle azioni intraprese attraverso l'uso della tua password, quindi ti preghiamo di mantenere la riservatezza della tua password. 
+                    Accetti di notificare immediatamente all’Assistenza Utenti qualsiasi uso non autorizzato effettivo o sospetto del tuo nome utente e password. 
+                    Non saremo responsabili per eventuali perdite derivanti dall'uso non autorizzato dei tuoi dati. 
+                </p>
+                
+                <p>
+                    Se vedi qualcosa che ritieni sia una violazione dei Termini di utilizzo, ti preghiamo di avvisarci inviando un'e-mail a membersupport@anteo.ai. 
+                </p>
+                
+                <p>
+                    <b>10. Strategie Custom </b>
+                </p>
+                
+                <p>
+                    Vogliamo aiutarti a pianificare il tuo marketing. Tuttavia, nell’offrire il servizio anteo<sup>ai</sup>, Globsit srl non può conoscere tutti i fatti rilevanti su di te e sulle tue esigenze individuali e aziendali, 
+                    e non possiamo affermare o dichiarare che qualsiasi Servizio sia perfettamente attinente alle tue esigenze senza una adeguata fase di training set che riguarda le reti neurali utilizzate come elemento essenziale del servizio. 
+                    Di conseguenza, accetti che qualsiasi raccomandazione o azione intrapresa dal Servizio non costituisce una garanzia che una particolare condizione, strategia o azione sia perfettamente e immediatamente corrispondente alle tue esigenze. 
+                    Se desideri una consulenza personale in tal senso, dovresti comunque ricercare un consulente abilitato in materia. 
+                </p>
+                
+                <p>
+                    Uno dei principi fondamentali relativamente al servizio anteo<sup>ai</sup> è che la persona migliore per gestire le tue comunicazioni digitali sei tu. 
+                    Utilizzando i nostri Servizi, accetti di assumerti la responsabilità delle tue ricerche e decisioni di pubblicazioni. 
+                    Accetti inoltre che Globsit srl, i suoi direttori, i suoi dipendenti e i suoi agenti non saranno responsabili per qualsiasi decisione di pubblicazione presa o azione intrapresa da te e da altri sulla base di notizie, 
+                    informazioni, opinioni o qualsiasi altro materiale pubblicato tramite i nostri Servizi. 
+                </p>
+                
+                <p>
+                    <b>11. Durata dei singoli accordi di fornitura e recesso</b>
+                </p>
+                
+                <p>
+                    Il Cliente richiede a Globsit i servizi mediante la sottoscrizione dell’Order Form con la quale il Cliente dichiara di avere preso visione, di conoscere, 
+                    accettare integralmente anche le Condizioni Generali di Contratto e la Netiquette Globsit in vigore alla data della sottoscrizione.    
+                    Il contratto anche in mancanza di accettazione espressa, si intende perfezionato all’atto dell’attivazione da parte di Globsit, dei servizi richiesti.  
+                    I contratti di fornitura stipulati da Globsit con i Clienti hanno una durata minima di dodici  mesi decorrente dalla data di attivazione dei servizi, ad eccezione di quanto espressamente indicato nel modulo Order Form.  
+                    Il Cliente, che sia qualificabile come consumatore ai sensi dell’art.3 del D.Lgs. n.206/2005, ha diritto di recedere, ai sensi del D.L.n.7/2007, in qualsiasi tempo, 
+                    con comunicazione scritta inviata a mezzo raccomandata a.r. con preavviso di almeno 30 (trenta) giorni al seguente destinatario ed indirizzo: Globsit S.r.l. – C. da Chiuse Pere snc - 95033 Biancavilla (CT). 
+                    Il recesso sarà efficace decorsi 30 giorni dalla ricezione, da parte di Globsit S.r.l. della citata comunicazione. 
+                    Viene fatta salva la facoltà di Globsit di richiedere al Cliente il rimborso dei costi diretti imputabili al servizio finale cessato ai sensi dell’art.1 comma 3 del D.L. n.7/2007. 
+                    Per i Clienti non qualificabili come consumatori ai sensi dell’art.3 del D.Lgs. n.206/2005 i contratti di fornitura stipulati da Globsit con i Clienti si intendono tacitamente rinnovati per la medesima durata di tempo, 
+                    se una delle parti non si avvale della facoltà di disdetta riconosciuta ad entrambe le parti. 
+                    Tale facoltà va esercitata dal Cliente mediante l’invio di lettera raccomandata A.R. indirizzata a Globsit S.r.l. almeno 30 (trenta) giorni prima della scadenza del contratto. 
+                </p>
+                
+                <p>
+                    <b>12. Esclusione di garanzie e responsabilità</b>
+                </p>
+                
+                <p>
+                    Si prega di leggere il Disclaimer di anteo<sup>ai</sup>, che è qui incorporato per riferimento.
+                </p>
+                
+                <p>
+                    anteo<sup>ai</sup> fornisce una gamma molto ampia di informazioni e commenti tramite i suoi numerosi Servizi. Di conseguenza, a seguito delle diverse opinioni del nostro personale, un AI Specialist può, di volta in volta, 
+                    intraprendere azioni o emettere raccomandazioni in merito a contenuti specifici diversi da quelli presi o emessi da un altro Servizio da noi fornito. 
+                    anteo<sup>ai</sup> non garantisce la completezza o l'accuratezza del Contenuto trovato nei nostri Servizi o la sua utilità per uno scopo particolare. E sebbene disponiamo dei tecnici più laboriosi e talentuosi del settore, 
+                    anteo<sup>ai</sup> non promette che i nostri contenuti o uno qualsiasi dei Servizi ti verranno forniti in modo ininterrotto, tempestivo, sicuro o privo di errori.   
+                    Questo significa che l'utente accetta che in nessun caso Globsit srl, i suoi dipendenti o i suoi agenti saranno responsabili per danni diretti, indiretti, incidentali, consequenziali, punitivi o di qualsiasi altro tipo derivanti dall'uso, 
+                    dall'acquisto o dal download di qualsiasi materiale sul nostro sito Web, o derivante da o correlato a questi Termini o all'Informativa sulla privacy, anche se siamo stati informati della possibilità di tali danni. 
+                    Ciò include, ma non è in alcun modo limitato a, perdite o lesioni causate da cose al di fuori del nostro controllo nella creazione o fornitura di uno qualsiasi dei nostri Servizi.  
+                </p>
+                
+                <p>
+                    anteo<sup>ai</sup> si basa su varie fonti di informazioni che si ritengono accurate e affidabili. Ci sono anche letteralmente migliaia di contributi digitali con informazioni e opinioni incredibilmente interessanti e perspicaci da condividere.
+                    Ma non possiamo e non ci assumiamo la responsabilità, né faremo affermazioni o dichiarazioni in merito all'accuratezza, completezza o anche la verità di ogni dato, informazione e opinione forniti attraverso i nostri Servizi. 
+                </p>
+                
+                <p>
+                    SALVO QUANDO DIVERSAMENTE INAPPLICABILE O VIETATO DALLA LEGGE, IL SITO WEB E I PRODOTTI E SERVIZI CONTENUTI ED OFFERTI SUL SITO SONO FORNITI CON LE FORMULE "COSÌ COME SONO" E "COME DISPONIBILI". 
+                    NÉ GLOBSIT SRL NÉ NESSUNO DEI NOSTRI PARTNER FORNISCE ALCUNA GARANZIA CHE LA QUALITÀ DI QUALSIASI PRODOTTO, SERVIZIO, INFORMAZIONE O ALTRO MATERIALE CHE ACQUISTI O OTTIENI DALL'UTILIZZO DEI NOSTRI SERVIZI SODDISFA LE TUE ASPETTATIVE O 
+                    CHE QUALSIASI ERRORE SARÀ IMMEDIATAMENTE CORRETTO.  L'UTENTE ACCETTA ESPRESSAMENTE DI ASSUMERSI L'INTERO RISCHIO RELATIVO ALLA QUALITÀ E ALLE PRESTAZIONI DEI NOSTRI SERVIZI E ALL'ACCURATEZZA O COMPLETEZZA DEI LORO CONTENUTI. 
+                </p>
+                
+                <p>
+                    <b>13. Comunicazione</b>
+                </p>
+                
+                <p>
+                    Alcune situazioni potrebbero richiedere la notifica di determinati eventi. Con l'uso del servizio riconosci e acconsenti che tali avvisi diventino effettivi quando li pubblichiamo sui nostri siti Web o te li inviamo via e-mail 
+                    (un altro motivo per mantenere aggiornate le impostazioni del tuo account). 
+                    Se non ci fornisci informazioni accurate, non possiamo essere ritenuti responsabili se non ti informiamo.
+                    Puoi richiederci di fornirti tali avvisi in formato cartaceo scrivendo a Globsit srl, C. da Chiuse Pere snc, 95033 Biancavilla (CT) Italy. 
+                </p>
+                
+                <p>
+                    <b>14. Risoluzione delle controversie e foro competente </b>
+                </p>
+                
+                <p>
+                    Se sorge una controversia in relazione al tuo utilizzo dei nostri Servizi o in relazione a uno qualsiasi di questi Termini  la nostra speranza è di poter risolvere la questione in modo informale. 
+                    Di conseguenza, in caso di Controversia, accettiamo di contattarci prima via e-mail con una descrizione della Controversia e di qualsiasi proposta di risoluzione.
+                    Invierai un'e-mail a membersupport@anteo.ai con la tua preoccupazione e Globsit srl ti contatterà tramite l'indirizzo e-mail che abbiamo in archivio per te. 
+                    Tutte le controversie che dovessero sorgere in merito all'interpretazione, validità, esecuzione ed efficacia della presenti condizioni di contratto, dei singoli accordi di fornitura, 
+                    e di ogni atto o fatto compiuto in esecuzione della fornitura sarà devoluto alla competenza esclusiva del Foro di Catania.  
+                </p>
+                
+                <p>
+                    <b>15. Tutela prevista dal D.LGS.N.206/2005  “CODICE DEL CONSUMO”  </b>
+                </p>
+                
+                <p>
+                    Se il Cliente è una persona fisica che non agisce per scopi riferibili alla sua attività professionale ed il contratto è stato stipulato a distanza o fuori dai locali commerciali, allo stesso si applicano le disposizioni  del D.Lgs.n.206/2005 “Codice del Consumo” in materia di esercizio del diritto di recesso.                                            
+                    Il diritto di recesso può essere esercitato entro 10 (dieci) giorni dalla data di conclusione del contratto.                                                                                                                                  
+                    Il Cliente che intenda esercitare il diritto di recesso deve: 
+                    
+                    <ul>
+                        <li> inviare entro 10 (dieci) giorni dalla attivazione del servizio una lettera raccomandata A.R., contenente: la manifestazione di volontà di avvalersi del diritto di recesso oppure in alternativa il Cliente può: </li>
+                        <li>inviare allo stesso soggetto sopra indicato una raccomandata entro 10 (dieci) giorni dalla conclusione del contratto;</li>
+                    </ul>
+                   
+                     in questi casi la comunicazione deve essere confermata entro 48 ore con avviso di ricevimento inviata all'indirizzo sotto riportato. <br>
+                     In qualsiasi caso le comunicazioni:
+                     
+                     <ul>
+                         <li>devono essere spedite a Globsit S.r.l. – C.da Chiuse Pere, sn - 95033 Biancavilla (CT); </li>
+                         <li>si intendono spedite in tempo utile se consegnate all'ufficio postale entro il termine di cui sopra;</li>
+                         <li>devono contenere elementi sufficienti all'individuazione del contratto; </li>
+                         <li>devono essere controfirmate dallo stesso soggetto che ha stipulato il contratto o formulato la proposta contrattuale.</li>
+                     </ul>
+                </p>
+                
+                <p>
+                    <b>16. Accordo e Privacy </b>
+                </p>
+                
+                <p>
+                    Riconosci e accetti che accettando elettronicamente i presenti Termini accetti espressamente i termini qui stabiliti. Riconosci che il tuo invio elettronico costituisce il tuo accordo e l'intenzione di essere vincolato da questi Termini e condizioni. 
+                    Tutti i dati personali sono conservati in UE secondo la Direttiva EU 679/2016 - D. Lgs. 101/2018 GDPR.   
+                    I presenti Termini e condizioni, compresi quelli incorporati per riferimento, costituiscono l'intero e unico accordo tra l'utente e Globsit srl e regolano l'utilizzo dei nostri servizi. 
+                </p>
+            </div>
+        </div>
+        
+        {% include 'components/footer.html' %}
+    </div>
+	
+	<script>
+        var logged = {{logged}};
+        arrangeNavbar('hiw');
+    </script>
+	
+</body>
+</html>

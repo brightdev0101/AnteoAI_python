@@ -1,0 +1,605 @@
+===============================
+=    ANTEO AI - API PROJECT   =
+=    STACK - PYTHON/FLASK/JS  =
+===============================
+
+
+Help on module addCustomTrend:
+
+NAME
+    addCustomTrend
+
+FUNCTIONS
+    addCustomTrend(userId, title)
+        Add a new Custom Trend API
+        
+        Params:
+            userId (integer) - User ID
+            title (string) - Trend title
+        
+        Return:
+            response - Composed response
+
+FILE
+    /home/TwitterIT21/webapp/API/addCustomTrend.py
+
+
+#############################################
+
+Help on module delCustomTrend:
+
+NAME
+    delCustomTrend
+
+FUNCTIONS
+    delCustomTrend(ct_id)
+        Delete Custom Trend API: delete a trend
+        
+        Params:
+            ct_id (integer) - Custom Trend ID
+        
+        Return:
+            response - Composed response
+
+FILE
+    /home/TwitterIT21/webapp/API/delCustomTrend.py
+
+
+#############################################
+
+Help on module getCustomTrend:
+
+NAME
+    getCustomTrend
+
+FUNCTIONS
+    getCustomTrend(key, ct_id)
+        Custom Trend API: retrieve custom trend data and configuration
+        
+        Params:
+            ct_id (integer) - Custom Trend ID
+        
+        Return:
+            ct (object) - {"config": {...}, "data": {...}}
+
+        Request (JSON):
+        {
+            'key': string,
+            'custom_trend_id': string
+        }
+
+        Response (JSON):
+            {
+                'status': boolean,
+                'message': string,
+                'data': {
+                    'custom_trend_id': string,
+                    'custom_config':{
+                        'keywords': [ string ],
+                        'algorithm': int (1 - Classic, 2 - Smart ,3 - Fast),
+                        'language': string,
+                        'georeference': string,
+                        'source_tw': boolean,
+                        'source_ig':boolean,
+                        'source_gogl':boolean,
+                        'analysis_text': boolean,
+                        'analysis_images': boolean,
+                        'analysis_emoji': boolean,
+                        'alert_sentiment': boolean,
+                        'alert_influencers': boolean,
+                        'alert_trends': boolean,
+                        'main_param': int (1 - Like, 2 - Repost, 3 - Clicks),
+                        'plot1': string ('bar_sentiment, 'pie_sentiment', 'map'),
+                        'plot2': string ('bar_sentiment, 'pie_sentiment', 'map'),
+                        'plot3': string ('bar_sentiment, 'pie_sentiment', 'map'),
+                        'report': int (1 - Full, 2 - Lite)
+
+                    },
+                    'plot_bar': [{
+                        'leaders': double,
+                        'effective': double,
+                        'stategic': double,
+                        'ineffective': double,
+                        'creative': double
+                    }],
+                    'plot_pie': [{
+                        'neutral': double,
+                        'positive':double,
+                        'negative': double
+                    }],
+                    'plot_map':[{
+                        'nation_id': string,
+                        'percentage': double
+                    }],
+                    'top_influencers':[{
+                        'username': string,
+                        'profile_url': string,
+                        'img_url': string
+                    }],
+                    'top_active':[{
+                        'username': string,
+                        'profile_url': string,
+                        'img_url': string
+                    }],
+                    'top_followed':[{
+                        'username': string,
+                        'profile_url': string,
+                        'img_url': string
+                    }],
+                    "tweets": [{
+                        "id": string,
+                        "img": "",
+                        "like": int,
+                        "retweet": int,
+                        "screen_name": string,
+                        "text": string,
+                        "time": string,
+                        "user": string,
+                        "user_img": string
+                    }
+                }
+            }
+
+
+FILE
+    /home/TwitterIT21/webapp/API/getCustomTrend.py
+
+
+#############################################
+
+Help on module getReport:
+
+NAME
+    getReport
+
+FUNCTIONS
+    getReport(ct_id)
+        Get report API: create report for the custom trend (ct_id) and return an URL for download
+
+        Params:
+            ct_id (integer) - Custom Trend ID
+
+        TODO >> [CustomTrend API] getReport
+        
+
+FILE
+    /home/TwitterIT21/webapp/API/getReport.py
+
+
+#############################################
+
+Help on module getTrend:
+
+NAME
+    getTrend
+
+FUNCTIONS
+    getTrend(trend_id, lang, tw, ig, gogl, text, images, emoji)
+        Get new home trends API
+        
+        Params:
+            trend_id (integer) - Trend ID (1 > TRENDS - 2 > FINANCE - 3 > SPORT . . .)
+            lang (string) - Trend language
+            tw (boolean) - Twitter data source flag
+            ig (boolean) - Instagram data source flag
+            gogl (boolean) - Google data source flag
+            text (boolean) - Text data analysis flag
+            images (boolean) - Images data analysis flag
+            emoji (boolean) - Emoji data analysis flag
+        
+        
+        Request (JSON):
+            {
+                'key': string,
+                'trend_id': int (1 > TRENDS - 2 > FINANCE - 3 > SPORT . . .),
+                'language': string,
+                'source_tw': boolean,
+                'source_ig':boolean,
+                'source_gogl':boolean,
+                'analysis_text': boolean,
+                'analysis_images': boolean,
+                'analysis_emoji': boolean
+            }
+
+
+        Response (JSON):
+            {
+                'status': boolean,
+                'message': string,
+                'data': {
+                    'plot_bar': [{
+                        'leaders': double,
+                        'effective': double,
+                        'stategic': double,
+                        'ineffective': double,
+                        'creative': double
+                    }],
+                    'plot_pie': [{
+                        'neutral': double,
+                        'positive':double,
+                        'negative': double
+                    }],
+                    'plot_map':[{
+                        'nation_id': string,
+                        'percentage': double
+                    }],
+                    'top_hashtags': [
+                        string,
+                        string,
+                        string,
+                        string,
+                        string,
+                        string
+                    ]
+                    'top_influencers':[{
+                        'username': string,
+                        'profile_url': string,
+                        'img_url': string
+                    }],
+                    'top_active':[{
+                        'username': string,
+                        'profile_url': string,
+                        'img_url': string
+                    }],
+                    'top_followed':[{
+                        'username': string,
+                        'profile_url': string,
+                        'img_url': string
+                    }],
+                    "tweets": [{
+                        "id": string,
+                        "img": "",
+                        "like": int,
+                        "retweet": int,
+                        "screen_name": string,
+                        "text": string,
+                        "time": string,
+                        "user": string,
+                        "user_img": string
+                    }]
+                }
+            }
+
+FILE
+    /home/TwitterIT21/webapp/API/getTrend.py
+
+
+#############################################
+
+Help on module getUser:
+
+NAME
+    getUser
+
+FUNCTIONS
+    getUser(current_user)
+        Get user informations API
+        
+        Params:
+            current_user (object) - User object Flask-Login
+        
+        
+        Return:
+            response - Composed response
+
+FILE
+    /home/TwitterIT21/webapp/API/getUser.py
+
+
+#############################################
+
+Help on module Response:
+
+NAME
+    Response
+
+CLASSES
+    builtins.object
+        Response
+    
+    class Response(builtins.object)
+     |  Response(status, message='')
+     |  
+     |  API Response Manager
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, status, message='')
+     |      Response object constructor
+     |      
+     |      Params:
+     |          status (boolean) - Response status
+     |          message (string) - Response status message
+     |  
+     |  add(self, key, data)
+     |      Add data to the response
+     |      
+     |      Params:
+     |          key (string) - Keyword for new data
+     |          data (object) - New data
+     |  
+     |  compose(self)
+     |      Create a response json object
+     |      
+     |      Return:
+     |          jwonifyed response
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+FILE
+    /home/TwitterIT21/webapp/API/Response.py
+
+
+#############################################
+
+Help on module setCustomTrend:
+
+NAME
+    setCustomTrend
+
+FUNCTIONS
+    setCustomTrend(ct_id, config)
+        Set Trend API: retrieve custom trend data and configuration
+        
+        Params:
+            ct_id (integer) - Custom Trend ID
+            config (object) - Custom Trend Configuration Object
+        
+        Return:
+            response - Composed response
+
+        Request (JSON):
+            {
+                'key': string,
+                'custom_trend_id': string,
+                'custom_config':{
+                        'keywords': [ string ],
+                        'algorithm': int (1 - Classic, 2 - Smart , 3 - Fast),
+                        'language': string,
+                        'georeference': string,
+                        'source_tw': boolean,
+                        'source_ig':boolean,
+                        'source_gogl':boolean,
+                        'analysis_text': boolean,
+                        'analysis_images': boolean,
+                        'analysis_emoji': boolean,
+                        'alert_sentiment': boolean,
+                        'alert_influencers': boolean,
+                        'alert_trends': boolean,
+                        'main_param': int (1 - Like, 2 - Repost, 3 - Clicks),
+                        'plot1': string ('bar_sentiment, 'pie_sentiment', 'map'),
+                        'plot2': string ('bar_sentiment, 'pie_sentiment', 'map'),
+                        'plot3': string ('bar_sentiment, 'pie_sentiment', 'map'),
+                        'report': int (1 - Full, 2 - Lite)
+                }
+            }
+
+            Response (JSON):
+                {
+                    'status': boolean,
+                    'message': string,
+                    'data': {}
+                }
+
+FILE
+    /home/TwitterIT21/webapp/API/setCustomTrend.py
+
+
+#############################################
+
+Help on module signIn:
+
+NAME
+    signIn
+
+FUNCTIONS
+    signIn(current_user, message)
+        User Login API
+        
+        Params:
+            current_user (object) - User object Flask-Login
+            message (integer) - Result message status (0 > Login process error - 1 > Login credentials error)
+        
+        
+        Return:
+            response - Composed response
+
+FILE
+    /home/TwitterIT21/webapp/API/signIn.py
+
+
+#############################################
+
+Help on module signUp:
+
+NAME
+    signUp
+
+FUNCTIONS
+    signUp(current_user, message)
+        User Registration API
+        
+        Params:
+            current_user (object) - User object Flask-Login
+            message (string) - Result message status 
+        
+        
+        Return:
+            response - Composed response
+
+FILE
+    /home/TwitterIT21/webapp/API/signUp.py
+
+
+#############################################
+
+Help on module userUpdate:
+
+NAME
+    userUpdate
+
+FUNCTIONS
+    userUpdate(data, current_user)
+        User Update API
+        
+        Params:
+            data (json) - User data to update
+            current_user (object) - User object Flask-Login
+        
+        
+        Request (JSON):
+            {
+                'key': string,
+                'data':{
+                    'username': string,
+                    'name': string,
+                    'email': string,
+                    'birthdata': string,
+                    'preferred_topics': [ string ],
+                    'custom_trends': [{
+                        'id': string,
+                        'name': string,
+                    }],
+                    'subscription_newsletter': boolean,
+                    'subscription_alert': boolean,
+                    'subscription_features_newsletter': boolean,
+                    'source_tw': boolean,
+                    'source_ig': boolean,
+                    'source_gogl': boolean
+                }
+            }
+
+        Response (JSON):
+            {
+                'status': boolean,
+                'message': string,
+                'data': {}
+            }
+
+FILE
+    /home/TwitterIT21/webapp/API/userUpdate.py
+
+
+#############################################
+
+Help on module routes:
+
+NAME
+    routes
+
+FUNCTIONS
+    account()
+        User profile page
+    
+    addCustomTrendAPI()
+        @app.route('/API/addcustomtrend', methods=['POST'])
+        @login_required - decorator
+
+        Add a new Custom Trend API
+    
+    custom()
+        Custom Analysis page
+    
+    delCustomTrendAPI()
+        @app.route('/API/delcustomtrend', methods=['POST'])
+        @login_required
+
+        Delete Custom Trend API: delete a trend
+
+   demo()
+        @app.route('/demo')
+
+        Demo Request & Pricing page
+    
+    form()
+        Form Login/Register page
+    
+    getCustomTrendAPI()
+        @app.route('/API/getcustomtrend', methods=['POST'])
+        @login_required
+
+        Custom Trend API: retrieve custom trend data and configuration
+    
+    getFile(filename)
+        @app.route('/imgs/<path:filename>')
+
+        Serve static files utility
+    
+    getTrendAPI()
+        @app.route('/API/gettrend', methods=['POST'])
+
+        Get new home trends API
+
+    getUserAPI()
+        @app.route('/API/getuser', methods=['GET'])
+        @login_required
+
+        Get user informations API
+    
+    hiw()
+        How It Works page
+    
+    home()
+        TwitterIT21 Home Page
+    
+    logout()
+        @app.route('/signout')
+        @login_required
+
+        User logout
+
+    lostPwdAPI()
+        @app.route('/API/pwdlost', methods=['POST'])
+
+        User recovery lost password API
+    
+    mailRegister()
+        @app.route('/mailregister', methods=['POST'])
+
+        User registration mail request
+    
+    setCustomTrendAPI()
+        @app.route('/API/setcustomtrend', methods=['POST'])
+        @login_required
+
+        Set Trend API: retrieve custom trend data and configuration
+    
+    signin()
+        @app.route('/signin', methods=['POST'])
+
+        User Login API
+    
+    signup()
+        @app.route('/signup', methods=['POST'])
+
+        User Registration API
+
+    trends()
+        Twitterit21 Trends Page
+    
+    userPwdAPI()
+        @app.route('/API/pwdupdate', methods=['POST'])
+        @login_required
+
+        User password update API
+    
+    userUpdateAPI()
+        @app.route('/API/userupdate', methods=['POST'])
+        @login_required
+
+        User informations update API
+
+DATA
+    current_user = None
+    request = <LocalProxy unbound>
+
+FILE
+    /home/TwitterIT21/webapp/routes.py
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="anteo aianteo aianteo aianteo aianteo aianteo aianteo aianteo ai by globsit">
+    <title>anteo AI - How it Works</title>
+    <meta name="description" content="anteo AI è lo strumento di NextGen Sentiment Analysis che ti aiuta a migliorare la tua strategia di Sales & Marketing. Scopri come funziona.">
+	<link rel="manifest" href="{{url_for('static', filename='manifest.json')}}">
+	<meta name="theme-color" content="#535c66">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/utils.js')}}"></script>
+
+    {% block styles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/howitworks.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/common.css')}}" /> 
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/components/navbar.css')}}" /> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/components/footer.css')}}" />  -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{url_for('static', filename='imgs/ios/apple-icon-57x57.png')}}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{url_for('static', filename='imgs/ios/apple-icon-60x60.png')}}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{url_for('static', filename='imgs/ios/apple-icon-72x72.png')}}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename='imgs/ios/apple-icon-76x76.png')}}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{url_for('static', filename='imgs/ios/apple-icon-114x114.png')}}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{url_for('static', filename='imgs/ios/apple-icon-120x120.png')}}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{url_for('static', filename='imgs/ios/apple-icon-144x144.png')}}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{url_for('static', filename='imgs/ios/apple-icon-152x152.png')}}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='imgs/ios/apple-icon-180x180.png')}}">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{{url_for('static', filename='imgs/android/android-icon-192x192.png')}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='imgs/favicon-32x32.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static', filename='imgs/favicon-96x96.png')}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='imgs/favicon-16x16.png')}}">
+	<link rel="manifest" href="{{url_for('static', filename='manifest.json')}}">
+	<meta name="theme-color" content="#ffffff">
+    {% endblock %}
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0LS3CRN0B"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-N0LS3CRN0B');
+	</script>
+</head>
+<body>
+
+	<div class="loader">
+		<i class="fas fa-cog fa-spin"></i>
+	</div>
+	
+	
+
+    <div id="main_bg"></div>
+
+    <div id="maincontainer">
+        {% include 'components/navbar.html' %}
+            
+        <div id="hiw_content">
+            
+            <div id="intro">
+                <div id="intro_title">
+                    <h1>CAPIRE LE CONVERSAZIONI, <br> CAPIRE LE PERSONE.</h1>
+                </div>
+                <div id="intro_subtitle">
+                    La NextGen Sentiment Analysis per ottenere il meglio dalle discussioni online.<br>
+                    Un altro punto di vista che tiene conto del Social Media Behaviour.
+                </div>
+            </div>
+        
+            <div id="scheme">
+                <div id="scheme_1" class="scheme_icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="scheme_next">
+                    <i class="fas fa-angle-double-right"></i>
+                </div>
+                <div id="scheme_2" class="scheme_icon">
+                    <i class="fas fa-filter"></i>
+                </div>
+                <div class="scheme_next">
+                    <i class="fas fa-angle-double-right"></i>
+                </div>
+                <div id="scheme_3" class="scheme_icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="scheme_next">
+                    <i class="fas fa-angle-double-right"></i>
+                </div>
+                <div id="scheme_4" class="scheme_icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                
+                
+            </div>
+            
+            <div id="demo">
+                <a href="/demo">DEMO REQUEST</a>
+            </div>
+        
+            <div id="steps">
+                <div id="step1" class="step_box">
+                    <div class="step_header">
+                        <span class="step_number">[ 1 ]</span>
+                        <span class="step_title">Ascolta</span>
+                    </div>
+                    <div class="step_description">
+                        I sensori di anteo<sup>ai</sup> (SmartBots) sono ubiqui. Ascolta la conversazione online ovunque avvenga.
+                    </div>
+                </div>
+                <div id="step2" class="step_box">
+                    <div class="step_header">
+                        <span class="step_number">[ 2 ]</span>
+                        <span class="step_title">Comprendi</span>
+                    </div>
+                    <div class="step_description">
+                        Per capire le discussioni bisogna capire le persone. Reti neurali complesse collaborano per calcolare SocialMediaBehaviour, Sentiment e altre metriche.
+                    </div>
+                </div>
+                <div id="step3" class="step_box">
+                    <div class="step_header">
+                        <span class="step_number">[ 3 ]</span>
+                        <span class="step_title">Decidi</span>
+                    </div>
+                    <div class="step_description">
+                        Oltre le metriche. L'AI ti consiglia una strategia efficace per entrare nella discussione e restare in trend con il tuo brand e il tuo prodotto.
+                    </div>
+                </div>
+            </div>
+        
+            <div id="applications">
+                <div id="application_title">
+                    APPLICAZIONI
+                </div>
+                
+                <div class="application_box">
+                    <div class="application_box_header">
+                        <div class="application_box_number">[ 1 ] </div>
+                        <div class="application_box_title">Brand Monitoring</div>
+                    </div>
+                    <div class="application_box_text">
+                        <b>La conversazione degli utenti smuove le opinioni.</b><br>
+                        anteo<sup>ai</sup> è lo strumento più efficace per capire <b>cosa ne pensa</b> la gente di te, del tuo marchio e del tuo prodotto.
+                        Ascolta le discussioni con anteo<sup>ai</sup> e segui i consigli dell'AI per <b>migliorare la percezione</b> che le persone hanno del brand.
+                    </div>
+                </div>
+                <div class="application_box">
+                    <div class="application_box_header">
+                        <div class="application_box_number">[ 2 ] </div>
+                        <div class="application_box_title">Content Strategy</div>
+                    </div>
+                    <div class="application_box_text">
+                        <b>Una strategia efficace è una strategia mirata. </b><br>
+                        Scopri come ottenere il massimo dalle discussioni online con una strategia di pubblicazione che segue i trend verticali del momento.
+                        L'AI di anteo ti aiuterà a redigere un <b>piano editoriale</b> adatto alla conversazione sul topic che viene rilevata dai sensori. <br>
+                        L'obiettivo: raggiungere un pubblico mirato e più ampio, ottimizzando i budget per le inserzioni. Ascolta le persone giuste e ... <b>ride the trend</b>!
+                    </div>
+                </div>
+                <div class="application_box">
+                    <div class="application_box_header">
+                        <div class="application_box_number">[ 3 ] </div>
+                        <div class="application_box_title">Insight Marketing</div>
+                    </div>
+                    <div class="application_box_text">
+                        <b>Un’immagine accurata della platea senza il bias introdotto dai sondaggi.</b> <br>
+                        L'evoluzione della <b>Business Intelligence</b> per la discussione online.<br>
+                        anteo<sup>ai</sup> ti consente di svolgere <b>indagini</b> e <b>analisi statistiche</b> per sondare le opinioni degli utenti e dei consumatori. 
+                        Con le indicazioni dell'AI mirate al tuo obiettivo scopri <b>nuovi mercati</b>, <b>potenziali clienti</b> o le <b>caratteristiche</b> che ancora mancano al tuo prodotto.
+                        
+                    </div>
+                </div>
+            </div>
+            
+           <div id="targets_title">
+                anteo<sup>ai</sup> è indispensabile per chi ...
+            </div>
+            
+            <div id="targets">
+                
+                <div class="target_box">
+                    <div class="target_text">
+                        ... si occupa dei contenuti
+                    </div>
+                    <div class="target_title">
+                        Content
+                    </div>
+                    <div class="target_icon">
+                        [ 1 ]
+                    </div>
+                   
+                </div>
+                <div class="target_box">
+                    <div class="target_text">
+                         ... si occupa della strategia
+                    </div>
+                    <div class="target_title">
+                       Marketing
+                    </div>
+                    <div class="target_icon">
+                        [ 2 ]
+                    </div>
+                </div>
+                <div class="target_box">
+                    <div class="target_text">
+                        ... si occupa di vendite e funnel
+                    </div>
+                    <div class="target_title">
+                        Sales
+                    </div>
+                    <div class="target_icon">
+                        [ 3 ]
+                    </div>
+                </div>
+             <div class="target_box">
+                     <div class="target_text">
+                        ... vuole monitorare i risultati
+                    </div>
+                    <div class="target_title">
+                        Management
+                    </div>
+                    <div class="target_icon">
+                        [ 4 ]
+                    </div>
+                </div>
+            </div>
+            
+            <div id="demo">
+                <a href="/demo">DEMO REQUEST</a>
+            </div>
+            
+        </div>
+        
+        {% include 'components/footer.html' %}
+    </div>
+	
+	<script>
+        var logged = {{logged}};
+    </script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='js/components/navbar.js')}}"></script> 
+	
+    <script>
+        arrangeNavbar('hiw');
+    </script>
+	
+</body>
+</html>

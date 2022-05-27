@@ -1,0 +1,350 @@
+.row1{
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+  padding: 20px;
+  /* background: #eaeaea; */
+  background-color: #2F2F2F; 
+  color:#CCC;
+  max-width: 550px;
+  margin:auto;
+  /* margin: 50px auto; */
+}
+
+.demo-top {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 13;
+  -webkit-box-orient: vertical;
+  /* max-width: 10ch */
+}
+.demo-wrapper {
+  padding: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 13; */
+  -webkit-box-orient: vertical;
+  max-width: 480px;
+  font-size: 25px;
+  text-align: justify;
+}
+.demo-2 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 35ch;
+}
+.row1>* {
+    flex-shrink: 0;
+    max-width: 100%;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#intro{
+    width:100%;
+    /* overflow-x:hidden; */
+}
+
+#intro_video{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    opacity: 0.8;
+    overflow-x:hidden;
+    object-fit: cover;
+}
+
+#intro_content{
+    position:absolute;
+    z-index: 5;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items:center;
+    top:0px;
+    width:100%;
+    height:100vh;
+}
+
+.intro_content_column{
+    /* padding-top:30px; */
+    padding-bottom:130px;
+    padding-left:20px;
+    padding-right:30px;
+    
+    color:#fff;
+    font-weight:100;
+    line-height: 1.0;
+}
+
+#intro_content_logo{
+    width:100%;
+}
+
+#intro_content_text{
+    width:90vw;
+    max-width: 380px;
+    margin-top:15px;
+}
+
+#intro_content_dx{
+    display:flex;
+    flex-direction:column;
+}
+
+/* ******************************** */
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+/* .mySlides_1 {display: none;} */
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot_1 {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* *********************************** */
+
+.intro_content_title{
+    width: 90vw;
+    max-width: 400px;
+    font-size: 22pt;
+    font-weight: 300;
+    background-color: rgba(60,60,60,0.5);
+    flex-grow: 1;
+    margin: 4px;
+    line-height: 35pt;
+    padding:8px;
+ 
+}
+
+.intro_content_dx_items{
+    max-width:400px;
+    width:90vw;
+    flex-grow:1;
+    margin:2px;
+    border:2px solid rgba(50,50,50,0.7);
+    background-color:rgba(50,50,50,0.5);
+}
+
+.intro_content_dx_items{
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.intro_content_boxes{
+    flex-grow:1;
+    max-width:30%;
+    padding:6px;
+    display:inline;
+}
+
+.intro_content_box_head{
+    font-size:35pt;
+}
+
+.intro_content_box_subhead{
+    font-weight:300;
+}
+
+.intro_content_hiw a, .intro_content_hiw a:hover,  .intro_content_hiw a:visited{
+    text-align: center;
+    color:#fff;
+    font-weight: 500;
+    font-size:25pt;
+}
+
+#tryit{
+    z-index:5;
+    display:flex;
+    /* height:110vh; */
+    align-content: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+#tryit_content{
+    text-align:center;
+    color:#eeeeee;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size:20pt;
+    font-weight:500;
+    background-color: rgba(50,50,50,0.7);
+    padding:58px;
+    width:58%;
+}
+
+#tryit_content a, #tryit_content a:hover,  #tryit_content a:visited{
+    color:#fff;
+    font-weight: 500;
+    font-size:30pt;
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( 1 );
+  }
+  5%
+  {
+    transform: scale( .75 );
+  }
+  10%
+  {
+    transform: scale( 1 );
+  }
+  15%
+  {
+    transform: scale( .80 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  25%
+  {
+    transform: scale( .85 );
+  }
+  30%
+  {
+    transform: scale( 1 );
+  }
+  100%
+  {
+    transform: scale( 1 );
+  }
+}
+
+#tryit_img{
+    animation: heartbeat 5s infinite;
+    padding-top: 10px;
+    /* height:150px; */
+    /* margin-bottom:30px; */
+}
+#tryit_text{
+    line-height:32px;
+    color:#BBB;
+    letter-spacing: 4px;
+}
+#tryit_link{
+    line-height:35px;
+}
+
+.image_part{
+  justify-content: center;
+}
+
+@media (max-width: 990px) {
+  .demo-wrapper {
+    padding: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 13; */
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+  }
+  .row1 {
+      display: block; 
+  }
+  #intro_content_sx{
+      padding-top:0px;
+      margin-top: 0vw;
+  }
+  #intro_content{
+    display:block;
+    text-align: center;
+}
+  .row1>* {
+      width:100%;
+      margin-right: 0px;
+      margin-left: 0px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+  }
+  .row1>#comment{ 
+      width: 100%;
+  }
+  .row1>#intro_content_logo {
+      width:100%;
+  }
+}

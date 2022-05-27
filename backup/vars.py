@@ -1,0 +1,4 @@
+DATA_PATH = "../data/"
+DB_PATH = "../users.db"
+DBX_TOKEN = "la1ayyUVEYIAAAAAAAAAAYW6K1yGlDhjp63Krv6Q5j9dGnbAu4PAObQPy11ZoURm"
+

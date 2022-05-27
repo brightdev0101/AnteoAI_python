@@ -1,0 +1,246 @@
+##################################################################
+Trend - Data Structure
+
+{
+   "latest_update":19283648191,
+   "plot_bar":[
+      {
+         "effective":100,
+         "popular":100,
+         "interactive":10,
+         "multimedial":40,
+         "trend_oriented":10
+      }
+   ],
+   "plot_pie":[
+      {
+         "neutral":10.5,
+         "positive":60.5,
+         "negative":28.999999999999996
+      }
+   ],
+   "plot_map":{
+      "FR":1
+   },
+   "top_hashtags":[
+      "ItaliaTeam",
+      "7agosto",
+      "Tokyo2020",
+      "Conyedo",
+      "7Agosto",
+      "StuporMundi",
+      "Wrestling"
+   ],
+   "top_influencers":[
+      {
+         "username":"fabfazio",
+         "profile_url":"https://twitter.com/fabfazio",
+         "img_url":"https://pbs.twimg.com/profile_images/679697748267012096/K0uG7UM5_normal.jpg"
+      },
+      {
+         "username":"officialmaz",
+         "profile_url":"https://twitter.com/officialmaz",
+         "img_url":"https://pbs.twimg.com/profile_images/1419660380016611335/wq4Oeflr_normal.jpg"
+      },
+      {
+         "username":"oss_romano",
+         "profile_url":"https://twitter.com/oss_romano",
+         "img_url":"https://pbs.twimg.com/profile_images/3572419790/c91b686608ffad587329ad2f3ab3c1e6_normal.jpeg"
+      }
+   ],
+   "top_active":[
+      {
+         "username":"_Sport_Calcio_",
+         "profile_url":"https://twitter.com/_Sport_Calcio_",
+         "img_url":"https://pbs.twimg.com/profile_images/1418663715990347780/Ba-5Q6yz_normal.jpg"
+      },
+      {
+         "username":"QuasiBoh",
+         "profile_url":"https://twitter.com/QuasiBoh",
+         "img_url":"https://pbs.twimg.com/profile_images/1402767463436193793/brFQwAI9_normal.jpg"
+      },
+      {
+         "username":"simcopter",
+         "profile_url":"https://twitter.com/simcopter",
+         "img_url":"https://pbs.twimg.com/profile_images/1295058960786087936/uhJ1Ts6F_normal.jpg"
+      }
+   ],
+   "top_followed":[
+      {
+         "username":"fabfazio",
+         "profile_url":"https://twitter.com/fabfazio",
+         "img_url":"https://pbs.twimg.com/profile_images/679697748267012096/K0uG7UM5_normal.jpg"
+      },
+      {
+         "username":"officialmaz",
+         "profile_url":"https://twitter.com/officialmaz",
+         "img_url":"https://pbs.twimg.com/profile_images/1419660380016611335/wq4Oeflr_normal.jpg"
+      },
+      {
+         "username":"oss_romano",
+         "profile_url":"https://twitter.com/oss_romano",
+         "img_url":"https://pbs.twimg.com/profile_images/3572419790/c91b686608ffad587329ad2f3ab3c1e6_normal.jpeg"
+      }
+   ],
+   "tweets":[
+      {
+         "id":"1424011816611495937",
+         "img":"",
+         "like":0,
+         "retweet":81,
+         "screen_name":"LVK469",
+         "text":"RT @ItaliaTeam_it: Batterlo a braccio di ferro non deve essere semplice. \ud83d\ude43 Abramo sei GRANDE! \ud83e\udd49\n\n#ItaliaTeam | #StuporMundi | #Tokyo2020 |\u2026",
+         "time":"2021-08-07 14:17:28",
+         "user":"Luca G.",
+         "user_img":"https://pbs.twimg.com/profile_images/1156815914165264386/QHaW4LJ4_normal.jpg"
+      },
+      {
+         "id":"1424011718036963338",
+         "img":"",
+         "like":0,
+         "retweet":17,
+         "screen_name":"Dorian221190",
+         "text":"RT @fanpage: Un trionfo bellissimo agguantato sul finale! Siamo medaglia di bronzo! \ud83c\uddee\ud83c\uddf9\nAbrham #Conyedo ha vinto medaglia di bronzo nella lo\u2026",
+         "time":"2021-08-07 14:17:05",
+         "user":"\ud835\udc03\ud835\udc0e\ud835\udc11\ud835\udc08\ud835\udc00\ud835\udc0d\ud83c\uddee\ud83c\uddf9TOKYO2021\ud83d\udc99",
+         "user_img":"https://pbs.twimg.com/profile_images/1396783266548563969/TyW3q8hE_normal.jpg"
+      }
+   ]
+}
+
+##################################################################
+CustomTrend - Config Structure
+
+{
+    'key': string,
+    'custom_trend_id': string,
+    'custom_config':{
+            'keywords': [ string ],
+            'algorithm': int (1 - Classic, 2 - Smart , 3 - Fast),
+            'language': string,
+            'georeference': string,
+            'source_tw': boolean,
+            'source_ig':boolean,
+            'source_gogl':boolean,
+            'analysis_text': boolean,
+            'analysis_images': boolean,
+            'analysis_emoji': boolean,
+            'alert_sentiment': boolean,
+            'alert_influencers': boolean,
+            'alert_trends': boolean,
+            'main_param': int (1 - Like, 2 - Repost, 3 - Clicks),
+            'plot1': string ('bar_sentiment, 'pie_sentiment', 'map'),
+            'plot2': string ('bar_sentiment, 'pie_sentiment', 'map'),
+            'plot3': string ('bar_sentiment, 'pie_sentiment', 'map'),
+            'report': int (1 - Full, 2 - Lite)
+        }
+}
+
+##################################################################
+CustomTrend - Data Structure
+
+{
+   "plot_bar":[
+      {
+         "effective":100,
+         "popular":100,
+         "interactive":10,
+         "multimedial":40,
+         "trend_oriented":10
+      }
+   ],
+   "plot_pie":[
+      {
+         "neutral":10.5,
+         "positive":60.5,
+         "negative":28.999999999999996
+      }
+   ],
+   "plot_map":{
+      "FR":1
+   },
+   "top_hashtags":[
+      "ItaliaTeam",
+      "7agosto",
+      "Tokyo2020",
+      "Conyedo",
+      "7Agosto",
+      "StuporMundi",
+      "Wrestling"
+   ],
+   "top_influencers":[
+      {
+         "username":"fabfazio",
+         "profile_url":"https://twitter.com/fabfazio",
+         "img_url":"https://pbs.twimg.com/profile_images/679697748267012096/K0uG7UM5_normal.jpg"
+      },
+      {
+         "username":"officialmaz",
+         "profile_url":"https://twitter.com/officialmaz",
+         "img_url":"https://pbs.twimg.com/profile_images/1419660380016611335/wq4Oeflr_normal.jpg"
+      },
+      {
+         "username":"oss_romano",
+         "profile_url":"https://twitter.com/oss_romano",
+         "img_url":"https://pbs.twimg.com/profile_images/3572419790/c91b686608ffad587329ad2f3ab3c1e6_normal.jpeg"
+      }
+   ],
+   "top_active":[
+      {
+         "username":"_Sport_Calcio_",
+         "profile_url":"https://twitter.com/_Sport_Calcio_",
+         "img_url":"https://pbs.twimg.com/profile_images/1418663715990347780/Ba-5Q6yz_normal.jpg"
+      },
+      {
+         "username":"QuasiBoh",
+         "profile_url":"https://twitter.com/QuasiBoh",
+         "img_url":"https://pbs.twimg.com/profile_images/1402767463436193793/brFQwAI9_normal.jpg"
+      },
+      {
+         "username":"simcopter",
+         "profile_url":"https://twitter.com/simcopter",
+         "img_url":"https://pbs.twimg.com/profile_images/1295058960786087936/uhJ1Ts6F_normal.jpg"
+      }
+   ],
+   "top_followed":[
+      {
+         "username":"fabfazio",
+         "profile_url":"https://twitter.com/fabfazio",
+         "img_url":"https://pbs.twimg.com/profile_images/679697748267012096/K0uG7UM5_normal.jpg"
+      },
+      {
+         "username":"officialmaz",
+         "profile_url":"https://twitter.com/officialmaz",
+         "img_url":"https://pbs.twimg.com/profile_images/1419660380016611335/wq4Oeflr_normal.jpg"
+      },
+      {
+         "username":"oss_romano",
+         "profile_url":"https://twitter.com/oss_romano",
+         "img_url":"https://pbs.twimg.com/profile_images/3572419790/c91b686608ffad587329ad2f3ab3c1e6_normal.jpeg"
+      }
+   ],
+   "tweets":[
+      {
+         "id":"1424011816611495937",
+         "img":"",
+         "like":0,
+         "retweet":81,
+         "screen_name":"LVK469",
+         "text":"RT @ItaliaTeam_it: Batterlo a braccio di ferro non deve essere semplice. \ud83d\ude43 Abramo sei GRANDE! \ud83e\udd49\n\n#ItaliaTeam | #StuporMundi | #Tokyo2020 |\u2026",
+         "time":"2021-08-07 14:17:28",
+         "user":"Luca G.",
+         "user_img":"https://pbs.twimg.com/profile_images/1156815914165264386/QHaW4LJ4_normal.jpg"
+      },
+      {
+         "id":"1424011718036963338",
+         "img":"",
+         "like":0,
+         "retweet":17,
+         "screen_name":"Dorian221190",
+         "text":"RT @fanpage: Un trionfo bellissimo agguantato sul finale! Siamo medaglia di bronzo! \ud83c\uddee\ud83c\uddf9\nAbrham #Conyedo ha vinto medaglia di bronzo nella lo\u2026",
+         "time":"2021-08-07 14:17:05",
+         "user":"\ud835\udc03\ud835\udc0e\ud835\udc11\ud835\udc08\ud835\udc00\ud835\udc0d\ud83c\uddee\ud83c\uddf9TOKYO2021\ud83d\udc99",
+         "user_img":"https://pbs.twimg.com/profile_images/1396783266548563969/TyW3q8hE_normal.jpg"
+      }
+   ]
+}

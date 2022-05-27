@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="anteo ai by globsit">
+    <title>anteo AI</title>
+    <meta name="description" content="anteo AI è lo strumento più efficace per capire cosa ne pensa la gente di te, del tuo marchio e del tuo prodotto. Tramite la NextGen Sentiment Analysis puoi ottenere il meglio dalle discussioni online.">
+
+    <link rel="manifest" href="{{url_for('static', filename='manifest.json')}}">
+	<meta name="theme-color" content="#535c66">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{url_for('static', filename='imgs/ios/apple-icon-57x57.png')}}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{url_for('static', filename='imgs/ios/apple-icon-60x60.png')}}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{url_for('static', filename='imgs/ios/apple-icon-72x72.png')}}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename='imgs/ios/apple-icon-76x76.png')}}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{url_for('static', filename='imgs/ios/apple-icon-114x114.png')}}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{url_for('static', filename='imgs/ios/apple-icon-120x120.png')}}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{url_for('static', filename='imgs/ios/apple-icon-144x144.png')}}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{url_for('static', filename='imgs/ios/apple-icon-152x152.png')}}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='imgs/ios/apple-icon-180x180.png')}}">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{{url_for('static', filename='imgs/android/android-icon-192x192.png')}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='imgs/favicon-32x32.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static', filename='imgs/favicon-96x96.png')}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='imgs/favicon-16x16.png')}}">
+   
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/competitive.css')}}" /> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/common.css')}}" />
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/components/navbar.css')}}" /> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/components/footer.css')}}" />  -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0LS3CRN0B"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-N0LS3CRN0B');
+	</script>
+</head>
+
+<body>
+    <div id="main_bg"></div>
+    <div id="maincontainer" class="">
+        {% include 'components/navbar.html' %}
+
+        <div id="intro" style="">
+            <!-- <svg height="1" width="100%" viewBox="0 0 1366 0" >
+                <line x1="0" y1="0" x2="1366" y2="0" style="stroke-width:1;" />
+            </svg> -->
+            <!-- <svg width="100%" height="25%" viewBox="0 0 1366 400">
+                <rect width="1366" height="400" style="fill:#CCC;stroke:#CCC;stroke-width:0;" />
+            </svg> -->
+            <div id="intro_content1" class="top-style  element-block">
+                <div id="intro_content_sx" class="intro_content_column" style="font-size: 60px;margin-top: 0px;">
+                    <B>COMPETITIVE INTELLIGENCE</B> <br />
+                    <!-- <textarea class="form-control" rows="5" maxlength="200" id="comment" name="text"  style="font-size: 24px; background-color: #2F2F2F; color:#CCC"></textarea> -->
+                    <h2><span class="wrapper demo-top" style="text-align: justify;">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem wwwww</span></h2>
+                </div>
+            </div>
+            <div class="margin_fix">
+                <!-- <svg height="120" width="100vw" id="svg-image" viewBox="0 0 1366 120"> 
+                    <polyline points="0,0 1100,0 1100,50 1230,0 1366,0" style="fill:#CCC;stroke:#d6d2d2;stroke-width:0;" />
+                </svg>     -->
+            </div>
+
+            <div class="row1 m-3" style="justify-content: center;">
+                <div id="intro_content_dx" class="intro_content_column">
+                    <h2><span class="demo-wrapper">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem wwww</span></h2>
+                </div>
+                <div id="intro_content_dx" class="intro_content_column">  
+                    <img id="intro_content_logo" style="width:100%" src="{{url_for('static', filename='imgs/comp_img1.png')}}" />
+                </div>
+            </div>
+            <div class="row1 m-3" style="justify-content: center;">
+                <div id="intro_content_dx" class="intro_content_column">  
+                    <img id="intro_content_logo" style="width:100%" src="{{url_for('static', filename='imgs/comp_img1.png')}}" />
+                </div>
+                <div id="intro_content_dx" class="intro_content_column">
+                    <h2><span class="demo-wrapper">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem wwww</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row1 justify-content-center" id="groupbutton">
+            <div class="form-group" style="display:flex; justify-content: center;">
+                <!-- <textarea class="form-control" maxlength="140" row="2" id="comment" name="text"  style="height:100px;"></textarea> -->
+                <h2><span class="demo-wrapper" style="max-width:440px;background-color: #2F2F2F; color:#CCC; font-size:23px;">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet wwwww</span></h2>
+            </div>
+            <div id="intro_content_dx" class="intro_content_column" style="padding-left: 5vw; display:flex; justify-content: center;">  
+                <button type="button" id="button1" class="btn btn-secondary btn-lg">FREE DEMO</button>
+            </div>
+            
+        </div>
+
+        {% include 'components/footer.html' %}
+
+    </div>
+    
+    <script>
+        // var logged = {{logged}};
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/utils.js')}}"></script>
+
+    <script type="text/javascript" src="{{url_for('static', filename='js/components/navbar.js')}}"></script>
+    
+    <script>
+        arrangeNavbar('home');
+        $(document).ready(function(){
+            $("#intro_video").get(0).play();
+        }); 
+    </script>
+
+</body>
+
+</html>

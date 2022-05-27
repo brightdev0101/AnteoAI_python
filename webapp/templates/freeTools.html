@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="anteo ai by globsit">
+    <title>anteo AI</title>
+    <meta name="description" content="anteo AI è lo strumento più efficace per capire cosa ne pensa la gente di te, del tuo marchio e del tuo prodotto. Tramite la NextGen Sentiment Analysis puoi ottenere il meglio dalle discussioni online.">
+
+    <link rel="manifest" href="{{url_for('static', filename='manifest.json')}}">
+	<meta name="theme-color" content="#535c66">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{url_for('static', filename='imgs/ios/apple-icon-57x57.png')}}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{url_for('static', filename='imgs/ios/apple-icon-60x60.png')}}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{url_for('static', filename='imgs/ios/apple-icon-72x72.png')}}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename='imgs/ios/apple-icon-76x76.png')}}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{url_for('static', filename='imgs/ios/apple-icon-114x114.png')}}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{url_for('static', filename='imgs/ios/apple-icon-120x120.png')}}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{url_for('static', filename='imgs/ios/apple-icon-144x144.png')}}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{url_for('static', filename='imgs/ios/apple-icon-152x152.png')}}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='imgs/ios/apple-icon-180x180.png')}}">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{{url_for('static', filename='imgs/android/android-icon-192x192.png')}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='imgs/favicon-32x32.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static', filename='imgs/favicon-96x96.png')}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='imgs/favicon-16x16.png')}}">
+   
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/freeTools.css')}}" /> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/common.css')}}" />
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/components/navbar.css')}}" /> 
+    <link rel="stylesheet" href="{{url_for('static', filename='css/components/footer.css')}}" />  -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0LS3CRN0B"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-N0LS3CRN0B');
+	</script>
+</head>
+
+<body>
+    <div id="main_bg"></div>
+    <div id="maincontainer" class="">
+        {% include 'components/navbar.html' %}
+
+        <div id="intro" style="">
+            
+            <div class="margin_fix">
+                <!-- <svg height="120" width="100vw" id="svg-image" viewBox="0 0 1366 120"> 
+                    <polyline points="0,0 1100,0 1100,50 1230,0 1366,0" style="fill:#CCC;stroke:#d6d2d2;stroke-width:0;" />
+                </svg>     -->
+            </div>
+            
+            <div class="m-3" style="justify-content: center; margin-bottom: 100px!important;">
+                <div class="container" style="margin-left:auto;margin-right:auto;">
+                    <nav style="display: inline-block;">
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <a class="nav-item nav-link active unactive" id="nav-finance-tab" data-toggle="tab" href="#nav-finance" role="tab" aria-controls="nav-finance" aria-selected="true" style="font-size: 16px;"><i class="fa fa-automobile" style="font-size: 16px;"></i>FINANCE</a>
+                          <a class="nav-item nav-link unactive" id="nav-politics-tab" data-toggle="tab" href="#nav-politics" role="tab" aria-controls="nav-politics" aria-selected="false" style="font-size: 16px;"><i class="fa fa-automobile" style="font-size: 16px;"></i>POLITICS</a>
+                          <a class="nav-item nav-link unactive" id="nav-sport-tab" data-toggle="tab" href="#nav-sport" role="tab" aria-controls="nav-sport" aria-selected="false" style="font-size: 16px;"><i class="fa fa-automobile" style="font-size: 16px;"></i>SPORT</a>
+                          <a class="nav-item nav-link unactive" id="nav-trends-tab" data-toggle="tab" href="#nav-trends" role="tab" aria-controls="nav-trends" aria-selected="false" style="font-size: 16px;"><i class="fa fa-automobile" style="font-size: 16px;"></i>TRENDS</a>
+                        </div>
+                    </nav>
+                  
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="nav-finance" role="tabpanel" aria-labelledby="nav-finance-tab">
+                            <div class="infogram-embed" data-id="927a366f-0d50-431c-9227-00558b72b9fc" data-type="interactive" data-title="GenericTrends-EN"></div>
+                            <script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");
+                            </script>
+                        </div>
+                        <div class="tab-pane fade tab-content-center" id="nav-politics" role="tabpanel" aria-labelledby="nav-politics-tab">
+                            <div class="infogram-embed" data-id="927a366f-0d50-431c-9227-00558b72b9fc" data-type="interactive" data-title="GenericTrends-EN"></div>
+                            <script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");
+                            </script>
+                        </div>
+                        <div class="tab-pane fade tab-content-center" id="nav-sport" role="tabpanel" aria-labelledby="nav-sport-tab">
+                            <div class="infogram-embed" data-id="927a366f-0d50-431c-9227-00558b72b9fc" data-type="interactive" data-title="GenericTrends-EN"></div>
+                            <script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");
+                            </script>
+                        </div>
+                        <div class="tab-pane fade" id="nav-trends" role="tabpanel" aria-labelledby="nav-trends-tab">
+                            <div class="infogram-embed" data-id="927a366f-0d50-431c-9227-00558b72b9fc" data-type="interactive" data-title="GenericTrends-EN"></div>
+                            <script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row1 justify-content-center" id="groupbutton">
+            <div class="form-group" style="display:flex; justify-content: center; margin-top: auto; margin-bottom: auto;">
+                <!-- <textarea class="form-control" maxlength="140" row="2" id="comment" name="text"  style="height:100px;"></textarea> -->
+                <h2><span class="demo-wrapper" style="background-color: #2F2F2F; color:#CCC; font-size:23px;">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet wwwww</span></h2>
+            </div>
+            <div id="intro_content_dx" class="intro_content_column">  
+                <button type="button" id="button1" class="btn btn-secondary btn-lg">FREE DEMO</button>
+            </div>
+            
+        </div>
+
+        {% include 'components/footer.html' %}
+
+    </div>
+    
+    <script>
+        // var logged = {{logged}};
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/utils.js')}}"></script>
+
+    <script type="text/javascript" src="{{url_for('static', filename='js/components/navbar.js')}}"></script>
+    
+    <script>
+        arrangeNavbar('home');
+        $(document).ready(function(){
+            $("#intro_video").get(0).play();
+        }); 
+    </script>
+
+</body>
+
+</html>

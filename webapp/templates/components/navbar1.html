@@ -1,0 +1,68 @@
+<!-- Navigation bar - component -->
+<nav>
+    <div id="nav_content">
+        <a href="/index"><img id="nav_logo" src="{{url_for('static', filename='imgs/logo_gray.png')}}" alt="Anteo AI"/></a>
+        <ul id="nav_menu" class="list_menu">
+            <a href="/custom"><li id="nav_menu_custom" class='hidden'>ANALYSIS</li></a>
+            <a>
+            <li class="nav-item dropdown visible">
+                <a class="nav-link dropdown-toggle show" style="padding-right: 7.5rem; padding-bottom: 0rem" href="#" role="button" data-bs-toggle="dropdown">USE CASES</a>
+                <p class="text-uppercase small-text" style="padding-left:30px;">explore</p>
+                <ul class="dropdown-menu p-3" style="min-width: 28rem;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="radio" />
+                            <label>Competitive Intelligence</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="radio" />
+                            <label>Content Strategy</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="radio" />
+                            <label>Sentiment Analysis</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="radio" />
+                            <label>Insight Marketing</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="radio" />
+                            <label>Performance Monitoring</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="radio" />
+                            <label>Social Gamification</label>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <a href="/trends"><li id="nav_menu_trends" class='visible'>TRENDS</li></a>
+            <a href="/howitworks"><li id="nav_menu_how" class='visible'>HOW IT WORKS</li></a>
+            <a href="/form"><li id="nav_menu_login" class='visible'>LOGIN</li></a>
+            <a href="/account"><li id="nav_menu_account" class='hidden'>ACCOUNT</li></a>
+        </ul>
+        <div id="nav_menu_button"> <span>MENU &nbsp;&nbsp;</span> <i id="nav_menu_icon" class="fas fa-bars"></i></div>
+    </div>
+</nav>
+
+<div id="nav_collaps_menu" class="hidden">
+    <!-- Standard Mobile Menu -->
+    <ul id="nav_standard">
+        <li id="nav_collaps_custom" class='hidden'><a href="/custom">ANALYSIS</a></li>
+        <li id="nav_collaps_trends" class='visible'><a href="/trends">TRENDS</a></li>
+        <li id="nav_collaps_how" class='visible'><a href="/howitworks">HOW IT WORKS</a></li>
+        <li id="nav_collaps_login" class='visible'><a href="/form">LOGIN</li>
+        <li id="nav_collaps_account" class='hidden'><a href="/account">ACCOUNT</a></li>
+    </ul>
+</div>
+
+<div id="nav_spacer" style="height:58px"></div>
+
+<button onclick="topFunction()" id="go-top" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
+
+<div class="corner-ribbon bottom-left sticky blue"><a href="/ukraine">Ukraine Special</a></div>
